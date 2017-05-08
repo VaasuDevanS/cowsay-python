@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+cowsay/__init__.py
+cowsay/main.py
+cowsay.egg-info/PKG-INFO
+cowsay.egg-info/SOURCES.txt
+cowsay.egg-info/dependency_links.txt
+cowsay.egg-info/not-zip-safe
+cowsay.egg-info/top_level.txt
