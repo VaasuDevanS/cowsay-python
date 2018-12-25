@@ -37,27 +37,27 @@ Available Characters for python are:
 ['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
 
              
-             syntax:-
-             
-             >>> import cowsay 
-             >>> cowsay.<character-name>(text-message)
-             
-                            (or)
-                            
-             >>> from cowsay import *
-             >>> <character-name>(text-message)
-             
-             Example:-
-             
-             >>> import cowsay
-             >>> cowsay.tux("Python is fun")
+syntax:-
+
+>>> import cowsay 
+>>> cowsay.<character-name>(text-message)
+
+    (or)
+
+>>> from cowsay import *
+>>> <character-name>(text-message)
+
+Example:-
+
+>>> import cowsay
+>>> cowsay.tux("Python is fun")
 
 
-             This will bring the tux character and will say the message passed as arguments.
+This will bring the tux character and will say the message passed as arguments.
 
 
-            **cowsay.chars** contains all the function names.
+**cowsay.chars** contains all the function names.
 
-            **cowsay.char_names** contains all the character names as strings.
+**cowsay.char_names** contains all the character names as strings.
 
-            **cowsay.about()** will display the basic info on how to use this module.
+**cowsay.about()** will display the basic info on how to use this module.
