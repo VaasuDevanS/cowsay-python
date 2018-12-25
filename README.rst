@@ -42,7 +42,7 @@ syntax:-
 >>> import cowsay 
 >>> cowsay.<character-name>(text-message)
 
-    (or)
+(or)
 
 >>> from cowsay import *
 >>> <character-name>(text-message)
