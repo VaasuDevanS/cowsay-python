@@ -23,18 +23,18 @@ Importing the Package
 Basic Information
 ******************
 
-             Original Author---> Tony Monroe (tony@nog.net)       # Thanks to him... !
+Original Author---> Tony Monroe (tony@nog.net)       # Thanks to him... !
 
-             For Python     ---> Vaasu Devan S
+For Python     ---> Vaasu Devan S
 
-             Email          ---> vaasuceg.96@gmail.com
+Email          ---> vaasuceg.96@gmail.com
 
-             __version__    ---> 1.0
+__version__    ---> 1.0
             
        
-        Available Characters for python are:
+Available Characters for python are:
 
-        ['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
+['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
 
              
              syntax:-
