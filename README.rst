@@ -1,5 +1,10 @@
 Cowsay
-******
+*******
+|PyPI download month| |PyPI download year| |PyPI download week|
+
+.. |PyPI download month| image:: https://pepy.tech/badge/cowsay 
+.. |PyPI download year| image:: https://pepy.tech/badge/cowsay/month
+.. |PyPI download week| image:: https://pepy.tech/badge/cowsay/week
 
 A python API/console script for the famous cowsay-linux. 
 
