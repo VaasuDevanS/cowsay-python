@@ -14,6 +14,7 @@
 
 from __future__ import print_function
 import re
+import sys
 
 flg=[]
 
@@ -36,10 +37,10 @@ Beavis =  '''
                 \\      |
               __/-___-- -__
              /            _ \\
-             
+
             '''
 
-Cheese = ''' 
+Cheese = '''
 
      /     \\_/         |
     |                 ||
@@ -56,10 +57,10 @@ Cheese = '''
         | |    | |
         ***    ***
        /___\\  /___\\
-       
+
        '''
 
-Daemon = ''' 
+Daemon = '''
             /- _  `-/  '
            (/\\/ \\ \\   /\\
            / /   | `    \\
@@ -76,28 +77,28 @@ Daemon = '''
         ______( (_  / \\______
       ,'  ,-----'   |        \\
       `--{__________)        \\/
-      
+
        '''
 
 
 Cow = '''
 
-   ^__^                             
-   (oo)\_______                   
-   (__)\       )\/\             
-       ||----w |           
-       ||     ||  
-       
+   ^__^
+   (oo)\_______
+   (__)\       )\/\
+       ||----w |
+       ||     ||
+
        '''
 
 
-Dragon = ''' 
+Dragon = '''
 
                            / \\  //\\
             |\\___/|      /   \\//  \\\\
-            /0  0  \\__  /    //  | \\ \\    
-           /     /  \\/_/    //   |  \\  \\  
-           \@_^_\@'/   \\/_   //    |   \\   \\ 
+            /0  0  \\__  /    //  | \\ \\
+           /     /  \\/_/    //   |  \\  \\
+           \@_^_\@'/   \\/_   //    |   \\   \\
            //_^_/     \\/_ //     |    \\    \\
         ( //) |        \\///      |     \\     \\
       ( / /) _|_ /   )  //       |      \\     _\\
@@ -109,11 +110,11 @@ Dragon = '''
              ///.----..>        \\             _ -~             `.  ^-`  ^-_
                ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~
                                                                   /.-~
-         
+
          '''
 
 
-Ghostbusters = ''' 
+Ghostbusters = '''
                        __---__
                     _-       /--______
                __--( /     \\ )XXXXXXXXXXX\\v.
@@ -133,18 +134,18 @@ Ghostbusters = '''
              -XXXXXXXX---------------  XXXXXX-
                 \\XXXXXXXXXXXXXXXXXXXXXXXXXX/
                   ""VXXXXXXXXXXXXXXXXXXV""
-                  
+
             '''
 
 
-Kitty = ''' 
+Kitty = '''
 
      ("`-'  '-/") .___..--' ' "`-._
          ` *_ *  )    `-.   (      ) .`-.__. `)
          (_Y_.) ' ._   )   `._` ;  `` -. .-'
       _.. `--'_..-_/   /--' _ .' ,4
-   ( i l ),-''  ( l i),'  ( ( ! .-'  
-        
+   ( i l ),-''  ( l i),'  ( ( ! .-'
+
         '''
 
 Meow = """
@@ -158,13 +159,13 @@ Meow = """
         `-'  /-\\/  | -|   \\__ \\   |-' |
           __/\\ / _/ \\/ __,-'   ) ,' _|'
          (((__/(((_.' ((___..-'((__,'
-         
-        """
-   
-         
-Milk = ''' 
 
-       ____________ 
+        """
+
+
+Milk = '''
+
+       ____________
        |__________|
       /           /\\
      /           /  \\
@@ -177,47 +178,47 @@ Milk = '''
   / |  \\_____/ |   / /
  / /|          |  / /|
 /||\\|          | /||\\/
-    -------------|   
-        | |    | | 
+    -------------|
+        | |    | |
        <__/    \\__>
-       
+
        '''
 
 
-Stegosaurus = '''                    
-                                     / `.   .' " 
+Stegosaurus = '''
+                                     / `.   .' "
                              .---.  <    > <    >  .---.
                              |    \\  \\ - ~ ~ - /  /    |
          _____          ..-~             ~-..-~
         |     |   \\~~~\\.'                    `./~~~/
        ---------   \\__/                        \\__/
-      .'  O    \\     /               /       \\  " 
+      .'  O    \\     /               /       \\  "
      (_____,    `._.'               |         }  \\/~~~/
       `----.          /       }     |        /    \\__/
             `-.      |       /      |       /      `. ,~~|
-                ~-.__|      /_ - ~ ^|      /- _      `..-'   
+                ~-.__|      /_ - ~ ^|      /- _      `..-'
                      |     /        |     /     ~-.     `-. _  _  _
                      |_____|        |_____|         ~ - . _ _ _ _ _>
 
               '''
 
 
-Stimpy = ''' 
-        .    _  .    
-       |\\_|/__/|    
-       / / \\/ \\  \\  
-      /__|O||O|__ \\ 
-     |/_ \\_/\\_/ _\\ |  
-     | | (____) | ||  
-     \\/\\___/\\__/  // 
+Stimpy = '''
+        .    _  .
+       |\\_|/__/|
+       / / \\/ \\  \\
+      /__|O||O|__ \\
+     |/_ \\_/\\_/ _\\ |
+     | | (____) | ||
+     \\/\\___/\\__/  //
      (_/         ||
       |          ||
-      |          ||\\   
-       \\        //_/  
+      |          ||\\
+       \\        //_/
         \\______//
        __ || __||
       (____(____)
-      
+
         '''
 
 
@@ -244,11 +245,11 @@ Turkey = '''
                      ___) >____) >___   ^\\_\\_\\_\\_\\_\\_\\)
                     ^^^//\\\\_^^//\\\\_^       ^(\\_\\_\\_\\)
                       ^^^ ^^ ^^^ ^
-                      
+
            '''
 
 
-Turtle = ''' 
+Turtle = '''
 
                                                ___-------___
                                            _-~~             ~~-_
@@ -270,7 +271,7 @@ Turtle = '''
         '''
 
 
-Tux = ''' 
+Tux = '''
 
         .--.
        |o_o |
@@ -279,24 +280,24 @@ Tux = '''
      (|     | )
     /'\\_   _/`\\
     \\___)=(___/
-    
+
     '''
 
 def about():
-    
+
     print('''
-    
+
              Original Author---> Tony Monroe (tony@nog.net)       # Thanks to him... !
              For Python     ---> Vaasu Devan S
              Email          ---> vaasuceg.96@gmail.com
-             __version__    ---> 1.0
-             
+             __version__    ---> 2.0.2
+
              visit my github page @ www.github.com/VaasuDevanS
-             
-             Cowsay for GNU/Linux is very very famous. 
+
+             Cowsay for GNU/Linux is very very famous.
 			 It would be fun and cool to have those characters in python..
-             
-             Available Characters (in python): 
+
+             Available Characters (in python):
              ==============================================
              |'beavis'     'dragon'         'tux'         |
              |'turtle'     'ghostbusters'   'turkey'      |
@@ -304,23 +305,23 @@ def about():
              |'daemon'     'meow'           'stimpy'      |
              |'cow'        'milk'                         |
              ==============================================
-             
+
              syntax:-
-             
-             >>> import cowsay 
+
+             >>> import cowsay
              >>> cowsay.<character-name>(text-message)
-             
+
                             (or)
-                            
+
              >>> from cowsay import *
              >>> <character-name>(text-message)
-             
+
              Example:-
-             
+
              >>> import cowsay
              >>> cowsay.tux("Python is fun")
-        
-                 _______________            
+
+                 _______________
                 < Python is fun >
                 -----------------
                                \\
@@ -333,13 +334,13 @@ def about():
                                 (|     | )
                                /'\\_   _/`\\
                                \\___)=(___/
-                               
-                               
+
+
             Enjoy coding with python and cowsay   :)
-    
+
         ''')
 
-__version__ = 1.0
+__version__ = '2.0.2'
 __name__ = 'cowsay' #For python
 
 
@@ -351,7 +352,7 @@ def String_processing(args):
     lines=[i.strip() for i in lines]
     lines=[i for i in lines if len(i)!=0]
     length=len(lines)
-    
+
     if length==1:
         flag=len(lines[0])
         if flag<50:
@@ -365,17 +366,17 @@ def String_processing(args):
                 if j%50==0:
                     args.insert(j,"\n")
             String_processing("".join(args))
-               
+
     else:
         flag=len(max(lines,key=len))
-        if all(len(i)<50 for i in lines): 
+        if all(len(i)<50 for i in lines):
             print("  "+"_"*flag)
-            print(" /"+" "*flag+"\\")            
+            print(" /"+" "*flag+"\\")
             for i in lines:
                 print("| "+i+" "*(flag-len(i)+1)+"|")
             print(" \\"+" "*flag+"/")
             print("  "+"="*flag)
-            flg.append(flag)                    
+            flg.append(flag)
         else:
             new_lines=[]
             for i in lines:
@@ -383,313 +384,318 @@ def String_processing(args):
                     args=list("".join(i))
                     for j,i in enumerate(args):
                         if j%50==0:
-                            args.insert(j,"\n") 
+                            args.insert(j,"\n")
                     new_lines.append("".join(args))
                 else:
                     new_lines.append(i+"\n")
             String_processing("".join(new_lines))
-                    
-                    
-# Functions start here..        
-    
+
+
+# Functions start here..
+
 def beavis(args):
 
-    try : 
+    try :
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
-    
+
         char_lines=Beavis.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*flag+i)
 
     except : print("Can't Say...!! Give something much more easier to Mr.Beavis...")
-    
+
 
 def cheese(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Cheese.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag+5)+i)
 
     except : print("Can't Say...!! Give something much more easier to Mr.Cheese...")
-       
-   
+
+
 
 def daemon(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Daemon.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag-3)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Daemon...") 
-        
+    except : print("Can't Say...!! Give something much more easier to Mr.Daemon...")
+
 
 def cow(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
-    
+
         char_lines=Cow.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag+5)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Cow...")    
-        
+    except : print("Can't Say...!! Give something much more easier to Mr.Cow...")
+
 
 def dragon(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Dragon.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag+3)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Dragon...")  
-    
-    
+    except : print("Can't Say...!! Give something much more easier to Mr.Dragon...")
+
+
 
 def ghostbusters(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Ghostbusters.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag-3)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Ghostbusters...")  
-        
+    except : print("Can't Say...!! Give something much more easier to Mr.Ghostbusters...")
+
 
 def kitty(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\")
-    
+
         char_lines=Kitty.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag+3)+i)
 
     except : print("Can't Say...!! Give something much more easier to Ms.Kitty...")
-        
+
 
 def meow(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\")
-    
+
         char_lines=Meow.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag+5)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Meow...")  
-    
-    
+    except : print("Can't Say...!! Give something much more easier to Mr.Meow...")
+
+
 
 def milk(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Milk.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag+5)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Milk...")    
-        
-    
+    except : print("Can't Say...!! Give something much more easier to Mr.Milk...")
+
+
 
 def stegosaurus(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Stegosaurus.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag-3)+i)
 
     except : print("Can't Say...!! Give something much more easier to Mr.stegosaurus...")
-    
-    
+
+
 
 def stimpy(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Stimpy.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag+4)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Stimpy...")  
-        
+    except : print("Can't Say...!! Give something much more easier to Mr.Stimpy...")
+
 
 def turkey(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\")
-    
+
         char_lines=Turkey.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag-3)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Turkey...")    
-    
-    
+    except : print("Can't Say...!! Give something much more easier to Mr.Turkey...")
+
+
 
 def turtle(args):
 
-    try : 
-                
+    try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\")
         print(" "*(flag+8)+"\\",end='')
-    
+
         char_lines=Turtle.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag-3)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Turtle...")  
-    
-    
+    except : print("Can't Say...!! Give something much more easier to Mr.Turtle...")
+
+
 
 def tux(args):
 
-    #try : 
-                
+    #try :
+
         String_processing(args)
         flag=flg[-1]
-            
+
         print(" "*(flag+5)+"\\")
         print(" "*(flag+6)+"\\")
         print(" "*(flag+7)+"\\",end='')
-    
+
         char_lines=Tux.split('\n')
         char_lines=[i for i in char_lines if len(i)!=0]
-    
+
         for i in char_lines:
             print(" "*(flag)+i)
 
-    #except : print("Can't Say...!! Give something much more easier to Mr.Tux...")    
-     
+    #except : print("Can't Say...!! Give something much more easier to Mr.Tux...")
+
 
 chars = [beavis , cheese , daemon , cow , dragon , ghostbusters , kitty , meow , milk , stegosaurus , stimpy , turkey , turtle , tux]
 
 char_names = ['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
-    
+
+def cli():
+    if '--version' in sys.argv[1:]:
+        print(__version__)
+        exit(0)
+    cow(' '.join(sys.argv[1:]))
 # End of File #
