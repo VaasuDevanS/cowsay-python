@@ -14,7 +14,7 @@ CLASSIFIERS = [
 ]
 
 setup(name='cowsay',
-      version='2.0.2',
+      version='2.0.3',
       url='https://github.com/VaasuDevanS/cowsay-python',
       license='GNU-GPL',
       author='Vaasu Devan S',
