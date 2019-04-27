@@ -21,20 +21,22 @@ Installation
 >>> python3 -m pip install cowsay
 
 Importing the Package
-=============================================
+=====================
 
 >>> import cowsay
 
 Basic Information
 ******************
 
-Original Author---> Tony Monroe (tony@nog.net)       # Thanks to him... !
+Original Author ---> Tony Monroe (tony@nog.net)       # Thanks to him... !
 
-For Python     ---> Vaasu Devan S
+For Python      ---> Vaasudevan S
 
-Email          ---> vaasuceg.96@gmail.com
+Email           ---> vaasuceg.96@gmail.com
 
-__version__    ---> 2.0.3
+__version__     ---> 2.0.3
+
+Contributor     ---> Chad Smith (https://github.com/cs01)
             
        
 Available Characters for python are:
