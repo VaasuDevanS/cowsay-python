@@ -14,6 +14,7 @@
 
 from __future__ import print_function
 import re
+import sys
 
 flg=[]
 
@@ -289,7 +290,7 @@ def about():
              Original Author---> Tony Monroe (tony@nog.net)       # Thanks to him... !
              For Python     ---> Vaasu Devan S
              Email          ---> vaasuceg.96@gmail.com
-             __version__    ---> 1.0
+             __version__    ---> 2.0.3
              
              visit my github page @ www.github.com/VaasuDevanS
              
@@ -339,7 +340,7 @@ def about():
     
         ''')
 
-__version__ = 1.0
+__version__ = '2.0.3'
 __name__ = 'cowsay' #For python
 
 
@@ -692,4 +693,9 @@ chars = [beavis , cheese , daemon , cow , dragon , ghostbusters , kitty , meow ,
 
 char_names = ['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
     
+def cli():
+    if '--version' in sys.argv[1:]:
+        print(__version__)
+        exit(0)
+    cow(' '.join(sys.argv[1:]))
 # End of File #
