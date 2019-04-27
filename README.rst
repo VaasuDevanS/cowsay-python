@@ -34,7 +34,7 @@ For Python     ---> Vaasu Devan S
 
 Email          ---> vaasuceg.96@gmail.com
 
-__version__    ---> 1.0
+__version__    ---> 2.0.3
             
        
 Available Characters for python are:
