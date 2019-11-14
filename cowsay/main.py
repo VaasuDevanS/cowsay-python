@@ -185,6 +185,22 @@ Milk = '''
        '''
 
 
+Pig = '''
+
+             ,.
+            (_|,.
+            ,' /, )_______   _
+        __j o``-'        `.'-)'
+        (")                 \'
+        `-j                |
+            `-._(           /
+                |_\  |--^.  /
+            /_]'|_| /_)_/
+                /_]'  /_]'
+
+      '''
+
+
 Stegosaurus = '''                    
                                      / `.   .' " 
                              .---.  <    > <    >  .---.
@@ -299,11 +315,11 @@ def about():
              
              Available Characters (in python): 
              ==============================================
-             |'beavis'     'dragon'         'tux'         |
-             |'turtle'     'ghostbusters'   'turkey'      |
-             |'cheese'     'kitty'          'stegosaurus' |
-             |'daemon'     'meow'           'stimpy'      |
-             |'cow'        'milk'                         |
+             |'beavis'     'dragon'         'pig'         |
+             |'turtle'     'ghostbusters'   'tux'         |
+             |'cheese'     'kitty'          'turkey'      |
+             |'daemon'     'meow'           'stegosaurus' |
+             |'cow'        'milk'           'stimpy'      |
              ==============================================
              
              syntax:-
@@ -578,7 +594,29 @@ def milk(args):
         for i in char_lines:
             print(" "*(flag+5)+i)
 
-    except : print("Can't Say...!! Give something much more easier to Mr.Milk...")    
+    except : print("Can't Say...!! Give something much more easier to Mr.Milk...")
+
+
+
+def pig(args):
+
+    try :
+
+        String_processing(args)
+        flag=flg[-1]
+
+        print(" "*(flag+5)+"\\")
+        print(" "*(flag+6)+"\\")
+        print(" "*(flag+7)+"\\")
+        print(" "*(flag+8)+"\\")
+
+        char_lines=Pig.split('\n')
+        char_lines=[i for i in char_lines if len(i)!=0]
+
+        for i in char_lines:
+            print(" "*(flag+5)+i)
+
+    except : print("Can't Say...!! Give something much more easier to Mr.Pig...")
         
     
 
@@ -689,9 +727,9 @@ def tux(args):
     #except : print("Can't Say...!! Give something much more easier to Mr.Tux...")    
      
 
-chars = [beavis , cheese , daemon , cow , dragon , ghostbusters , kitty , meow , milk , stegosaurus , stimpy , turkey , turtle , tux]
+chars = [beavis , cheese , daemon , cow , dragon , ghostbusters , kitty , meow , milk , pig, stegosaurus , stimpy , turkey , turtle , tux]
 
-char_names = ['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
+char_names = ['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'pig', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
     
 def cli():
     if '--version' in sys.argv[1:]:
