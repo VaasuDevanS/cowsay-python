@@ -2,11 +2,11 @@ Cowsay
 *******
 |PyPI download month| |PyPI download year| |PyPI download week|
 
-.. |PyPI download month| image:: https://pepy.tech/badge/cowsay 
+.. |PyPI download month| image:: https://pepy.tech/badge/cowsay
 .. |PyPI download year| image:: https://pepy.tech/badge/cowsay/month
 .. |PyPI download week| image:: https://pepy.tech/badge/cowsay/week
 
-A python API/console script for the famous cowsay-linux. 
+A python API/console script for the famous cowsay-linux.
 
 cowsay for GNU/Linux was initially written in perl by Tony Monroe (tony@nog.net), with suggestions from Shannon Appel (appel@CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito@CSUA.Berkeley.EDU).
 
@@ -37,16 +37,16 @@ Email           ---> vaasuceg.96@gmail.com
 __version__     ---> 2.0.3
 
 Contributor     ---> Chad Smith (https://github.com/cs01)
-            
-       
+
+
 Available Characters for python are:
 
-['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
+['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'pig', 'stegosaurus', 'stimpy', 'turkey', 'turtle', 'tux']
 
-             
+
 syntax:-
 
->>> import cowsay 
+>>> import cowsay
 >>> cowsay.<character-name>(text-message)
 
 (or)
