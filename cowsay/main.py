@@ -288,48 +288,48 @@ Tux = '''
 
 #%%
 
-def string_processing(args):
+def string_processing(text):
 
-    args = str(args)
-    lines = args.split("\n")
+    text = str(text)
+    lines = text.split("\n")
     lines = [i.strip() for i in lines]
     lines = [i for i in lines if len(i) != 0]
-    length = len(lines)
+    line_count = len(lines)
     
-    if length == 1:
+    if line_count == 1:
 
-        flag = len(lines[0])
-        if flag < 50:
-            print("  " + "_" * flag)
-            print("< " + lines[0] + " " * (flag - len(lines[0]) + 1) + ">")
-            print("  " + "=" * flag)
-            flg.append(flag)
+        text_width = len(lines[0])
+        if text_width < 50:
+            print("  " + "_" * text_width)
+            print("< " + lines[0] + " " * (text_width - len(lines[0]) + 1) + ">")
+            print("  " + "=" * text_width)
+            flg.append(text_width)
         else:
-            args = list("".join(lines[0]))
-            for j, i in enumerate(args):
+            text = list("".join(lines[0]))
+            for j, i in enumerate(text):
                 if j % 50 == 0:
-                    args.insert(j, "\n")
-            string_processing("".join(args))
+                    text.insert(j, "\n")
+            string_processing("".join(text))
                
     else:
-        flag = len(max(lines, key=len))
+        text_width = len(max(lines, key=len))
         if all(len(i) < 50 for i in lines):
-            print("  " + "_" * flag)
-            print(" /" + " " * flag + "\\")
+            print("  " + "_" * text_width)
+            print(" /" + " " * text_width + "\\")
             for i in lines:
-                print("| " + i + " " * (flag - len(i) + 1) + "|")
-            print(" \\" + " " * flag + "/")
-            print("  " + "=" * flag)
-            flg.append(flag)                    
+                print("| " + i + " " * (text_width - len(i) + 1) + "|")
+            print(" \\" + " " * text_width + "/")
+            print("  " + "=" * text_width)
+            flg.append(text_width)                    
         else:
             new_lines = []
             for i in lines:
                 if len(i) > 50:
-                    args = list("".join(i))
-                    for j, i in enumerate(args):
+                    text = list("".join(i))
+                    for j, i in enumerate(text):
                         if j % 50 == 0:
-                            args.insert(j, "\n")
-                    new_lines.append("".join(args))
+                            text.insert(j, "\n")
+                    new_lines.append("".join(text))
                 else:
                     new_lines.append(i + "\n")
             string_processing("".join(new_lines))
