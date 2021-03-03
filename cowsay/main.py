@@ -15,8 +15,6 @@ import sys
 __version__ = '3.0'
 __name__ = 'cowsay'
 
-flg = []
-
 Beavis = r'''
              _------~~-,
           ,'            ,
@@ -301,7 +299,6 @@ def string_processing(text):
             print("  " + "_" * text_width)
             print("< " + lines[0] + " " * (text_width - len(lines[0]) + 1) + ">")
             print("  " + "=" * text_width)
-            flg.append(text_width)
         else:
             text = list("".join(lines[0]))
             for j, i in enumerate(text):
@@ -317,8 +314,7 @@ def string_processing(text):
             for i in lines:
                 print("| " + i + " " * (text_width - len(i) + 1) + "|")
             print(" \\" + " " * text_width + "/")
-            print("  " + "=" * text_width)
-            flg.append(text_width)                    
+            print("  " + "=" * text_width)                 
         else:
             new_lines = []
             for i in lines:
@@ -331,6 +327,7 @@ def string_processing(text):
                 else:
                     new_lines.append(i + "\n")
             string_processing("".join(new_lines))
+    return text_width
                     
                     
 #%% Character specific functions with minor tweaks
@@ -339,8 +336,8 @@ def beavis(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -360,8 +357,8 @@ def cheese(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -382,8 +379,8 @@ def daemon(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -404,8 +401,8 @@ def cow(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -424,8 +421,8 @@ def dragon(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -446,8 +443,8 @@ def ghostbusters(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -469,8 +466,8 @@ def kitty(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -491,8 +488,8 @@ def meow(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -513,8 +510,8 @@ def milk(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -535,8 +532,8 @@ def pig(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -557,8 +554,8 @@ def stegosaurus(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -580,8 +577,8 @@ def stimpy(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -602,8 +599,8 @@ def turkey(args):
 
     try:
 
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -623,8 +620,8 @@ def turkey(args):
 def turtle(args):
 
     try:
-        string_processing(args)
-        flag = flg[-1]
+        text_width = string_processing(args)
+        flag = text_width
 
         print(' ' * (flag + 5) + '\\')
         print(' ' * (flag + 6) + '\\')
@@ -643,8 +640,8 @@ def turtle(args):
 
 def tux(args):
 
-    string_processing(args)
-    flag = flg[-1]
+    text_width = string_processing(args)
+    flag = text_width
 
     print(' ' * (flag + 5) + '\\')
     print(' ' * (flag + 6) + '\\')
