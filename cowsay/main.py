@@ -286,47 +286,31 @@ Tux = '''
 
 #%%
 
-def string_processing(text):
+def wrap_lines(lines, max_width=49):
+    # TODO: Wrap a line only at whitespaces
+    new_lines = []
+    for line in lines:
+        for line_part in [
+            line[i:i+max_width] for i in range(0, len(line), max_width)
+        ]:
+            new_lines.append(line_part)
+    return new_lines
 
+
+def string_processing(text):
     text = str(text)
     lines = [line.strip() for line in str(text).split("\n")]
     lines = [line for line in lines if line]
-    
-    if len(lines) == 1:
-
-        text_width = len(lines[0])
-        if text_width < 50:
-            print("  " + "_" * text_width)
-            print("< " + lines[0] + " " * (text_width - len(lines[0]) + 1) + ">")
-            print("  " + "=" * text_width)
-        else:
-            text = list("".join(lines[0]))
-            for j, i in enumerate(text):
-                if j % 50 == 0:
-                    text.insert(j, "\n")
-            string_processing("".join(text))
-               
-    else:
-        text_width = len(max(lines, key=len))
-        if all(len(i) < 50 for i in lines):
-            print("  " + "_" * text_width)
-            print(" /" + " " * text_width + "\\")
-            for i in lines:
-                print("| " + i + " " * (text_width - len(i) + 1) + "|")
-            print(" \\" + " " * text_width + "/")
-            print("  " + "=" * text_width)                 
-        else:
-            new_lines = []
-            for i in lines:
-                if len(i) > 50:
-                    text = list("".join(i))
-                    for j, i in enumerate(text):
-                        if j % 50 == 0:
-                            text.insert(j, "\n")
-                    new_lines.append("".join(text))
-                else:
-                    new_lines.append(i + "\n")
-            string_processing("".join(new_lines))
+    lines = wrap_lines(lines)
+    text_width = max([len(line) for line in lines])
+    print("  " + "_" * text_width)
+    if len(lines) > 1:
+        print(" /" + " " * text_width + "\\")
+    for line in lines:
+        print("| " + line + " " * (text_width - len(line) + 1) + "|")
+    if len(lines) > 1:
+        print(" \\" + " " * text_width + "/")
+    print("  " + "=" * text_width)                 
     return text_width
                     
                     
