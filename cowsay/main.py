@@ -6,7 +6,6 @@ Last Modified on: Dec 08, 2020
 Description: Python package - cowsay
 """
 
-
 from __future__ import print_function
 import sys
 
@@ -28,12 +27,9 @@ def wrap_lines(lines, max_width=49):
             new_lines.append(line_part)
     return new_lines
 
-
 def string_processing(text):
-    text = str(text)
     lines = [line.strip() for line in str(text).split("\n")]
-    lines = [line for line in lines if line]
-    lines = wrap_lines(lines)
+    lines = wrap_lines([line for line in lines if line])
     text_width = max([len(line) for line in lines])
     print("  " + "_" * text_width)
     if len(lines) > 1:
