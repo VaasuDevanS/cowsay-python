@@ -27,33 +27,41 @@ def wrap_lines(lines, max_width=49):
             new_lines.append(line_part)
     return new_lines
 
-def string_processing(text):
+def generate_bubble(text):
     lines = [line.strip() for line in str(text).split("\n")]
     lines = wrap_lines([line for line in lines if line])
     text_width = max([len(line) for line in lines])
-    print("  " + "_" * text_width)
+    output = []
+    output.append("  " + "_" * text_width)
     if len(lines) > 1:
-        print(" /" + " " * text_width + "\\")
+        output.append(" /" + " " * text_width + "\\")
     for line in lines:
-        print("| " + line + " " * (text_width - len(line) + 1) + "|")
+        output.append("| " + line + " " * (text_width - len(line) + 1) + "|")
     if len(lines) > 1:
-        print(" \\" + " " * text_width + "/")
-    print("  " + "=" * text_width)                 
-    return text_width
-                    
-    
+        output.append(" \\" + " " * text_width + "/")
+    output.append("  " + "=" * text_width)                 
+    return output
+
+def generate_char(char, text_width):
+    output = []
+    char_lines = char.split('\n')
+    char_lines = [i for i in char_lines if len(i) != 0]
+    for line in char_lines:
+        output.append(' ' * text_width + line)
+    return output
+
+
 # we are doing some magic here: Creating the functions dynamically.
 # in .characters is a dict CHARS which holds the lines for the characters.
 # For each entry there, we create a function.
 # Wo do this, to not break the old API.
 
 def draw(char, text):
-    text_width = string_processing(text)
-    flag = text_width
-    char_lines = char.split('\n')
-    char_lines = [i for i in char_lines if len(i) != 0]
-    for line in char_lines:
-        print(' ' * (flag - 0) + line)
+    output = generate_bubble(text)
+    text_width = max([len(line) for line in output]) - 4  # 4 is the frame
+    output += generate_char(char, text_width)
+    for line in output:
+        print(line)
 
 chars = []
 for char_name, char_lines in CHARS.items():
@@ -62,6 +70,7 @@ for char_name, char_lines in CHARS.items():
     func.__name__ = char_name
     globals()[char_name] = func
     chars.append(func)
+
 
 def cli():
 
