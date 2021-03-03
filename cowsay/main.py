@@ -284,7 +284,6 @@ Tux = '''
     
     '''
 
-#%%
 
 def wrap_lines(lines, max_width=49):
     # TODO: Wrap a line only at whitespaces
@@ -313,8 +312,6 @@ def string_processing(text):
     print("  " + "=" * text_width)                 
     return text_width
                     
-                    
-#%% Character specific functions with minor tweaks
     
 def beavis(args):
 
@@ -637,8 +634,6 @@ def tux(args):
     for i in char_lines:
         print(' ' * flag + i)
 
-
-#%%
 
 chars = [beavis, cheese, daemon, cow, dragon, ghostbusters, kitty, meow, milk,
          pig, stegosaurus, stimpy, turkey, turtle, tux]
