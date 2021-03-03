@@ -291,12 +291,10 @@ Tux = '''
 def string_processing(text):
 
     text = str(text)
-    lines = text.split("\n")
-    lines = [i.strip() for i in lines]
-    lines = [i for i in lines if len(i) != 0]
-    line_count = len(lines)
+    lines = [line.strip() for line in str(text).split("\n")]
+    lines = [line for line in lines if line]
     
-    if line_count == 1:
+    if len(lines) == 1:
 
         text_width = len(lines[0])
         if text_width < 50:
