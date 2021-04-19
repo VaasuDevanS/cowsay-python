@@ -118,7 +118,7 @@ More characters
 ===============
 ```
 >>> cowsay.char_names
-['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'pig', 'stegosaurus', 'stimpy', 'trex', 'turkey', 'turtle', 'tux']
+dict_keys(['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty', 'meow', 'milk', 'pig', 'stegosaurus', 'stimpy', 'trex', 'turkey', 'turtle', 'tux'])
 
 >>> cowsay.chars
 {'beavis': <function func at 0x000002339858E310>, 'cheese': <function func at 0x000002339858E3A0>, 'daemon': <function func at 0x000002339858E430>, 'cow': <function func at 0x000002339858E4C0>, 'dragon': <function func at 0x000002339858E550>, 'ghostbusters': <function func at 0x000002339858E5E0>, 'kitty': <function func at 0x000002339858E670>, 'meow': <function func at 0x000002339858E700>, 'milk': <function func at 0x000002339858E790>, 'pig': <function func at 0x000002339858E820>, 'stegosaurus': <function func at 0x000002339858E8B0>, 'stimpy': <function func at 0x000002339858E940>, 'trex': <function func at 0x000002339858E9D0>, 'turkey': <function func at 0x000002339858EA60>, 'turtle': <function func at 0x000002339858EAF0>, 'tux': <function func at 0x000002339858EB80>}
