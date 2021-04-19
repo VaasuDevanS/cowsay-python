@@ -5,8 +5,8 @@ import io
 import sys
 
 from .main import beavis, cheese, daemon, cow, dragon, ghostbusters
-from .main import kitty, meow, milk, pig, stegosaurus, stimpy, turkey
-from .main import turtle, tux
+from .main import kitty, meow, milk, pig, stegosaurus, stimpy, trex
+from .main import turkey, turtle, tux
 
 LOREM = """Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -359,6 +359,52 @@ STIMPY_SOLUTION = r"""
                                                            (____(____)
 """
 
+TREX_SOLUTION = r'''
+  _________________________________________________
+ /                                                 \
+| Lorem ipsum dolor sit amet, consetetur sadipscing |
+|  elitr, sed diamnonumy eirmod tempor invidunt ut  |
+| labore et dolore magna aliquyam erat,sed diam vol |
+| uptua. At vero eos et accusam et justo duo dolore |
+| s et ea rebum.                                    |
+ \                                                 /
+  =================================================
+                                                        \
+                                                         \
+                                                          \
+                                                           \
+                                                              .-=-==--==--.
+                                                        ..-=="  ,'o`)      `.
+                                                      ,'         `"'         \
+                                                     :  (                     `.__...._
+                                                     |                  )    /         `-=-.
+                                                     :       ,vv.-._   /    /               `---==-._
+                                                      \/\/\/VV ^ d88`;'    /                         `.
+                                                          ``  ^/d88P!'    /             ,              `._
+                                                             ^/    !'   ,.      ,      /                  "-,,__,,--'""""-.
+                                                            ^/    !'  ,'  \ . .(      (         _           )  ) ) ) ))_,-.\
+                                                           ^(__ ,!',"'   ;:+.:%:a.     \:.. . ,'          )  )  ) ) ,"'    '
+                                                           ',,,'','     /o:::":%:%a.    \:.:.:         .    )  ) _,'
+                                                            """'       ;':::'' `+%%%a._  \%:%|         ;.). _,-""
+                                                                   ,-='_.-'      ``:%::)  )%:|        /:._,"
+                                                                  (/(/"           ," ,'_,'%%%:       (_,'
+                                                                                 (  (//(`.___;        \
+                                                                                  \     \    `         `
+                                                                                   `.    `.   `.        :
+                                                                                     \. . .\    : . . . :
+                                                                                      \. . .:    `.. . .:
+                                                                                       `..:.:\     \:...\
+                                                                                        ;:.:.;      ::...:
+                                                                                        ):%::       :::::;
+                                                                                    __,::%:(        :::::
+                                                                                 ,;:%%%%%%%:        ;:%::
+                                                                                   ;,--""-.`\  ,=--':%:%:\
+                                                                                  /"       "| /-".:%%%%%%%\
+                                                                                                  ;,-"'`)%%)
+                                                                                                 /"      "|
+
+'''
+
 TURKEY_SOLUTION = r"""
   _________________________________________________
  /                                                 \
@@ -536,6 +582,12 @@ class TestCowsay(unittest.TestCase):
         output = capture_output(stimpy, (LOREM))
         output = delete_empty_lines(output)
         solution = delete_empty_lines(STIMPY_SOLUTION)
+        assert output == solution
+        
+    def test_trex(self):
+        output = capture_output(trex, (LOREM))
+        output = delete_empty_lines(output)
+        solution = delete_empty_lines(TREX_SOLUTION)
         assert output == solution
 
     def test_turkey(self):

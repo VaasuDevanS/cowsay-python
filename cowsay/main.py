@@ -1,21 +1,15 @@
-"""
-Author: Vaasudevan Srinivasan
-Author Email: vaasuceg.96@gmail.com
-Created on: May 08, 2017
-Last Modified on: Dec 08, 2020
-Description: Python package - cowsay
-"""
-
 from __future__ import print_function
 import sys
+import re
 
 from .characters import CHARS
 
-__version__ = '3.0'
+__version__ = '4.0'
 __name__ = 'cowsay'
 
 
 char_names = CHARS.keys()
+
 
 def wrap_lines(lines, max_width=49):
     # TODO: Wrap a line only at whitespaces
@@ -26,6 +20,7 @@ def wrap_lines(lines, max_width=49):
         ]:
             new_lines.append(line_part)
     return new_lines
+
 
 def generate_bubble(text):
     lines = [line.strip() for line in str(text).split("\n")]
@@ -42,6 +37,7 @@ def generate_bubble(text):
     output.append("  " + "=" * text_width)                 
     return output
 
+
 def generate_char(char, text_width):
     output = []
     char_lines = char.split('\n')
@@ -56,20 +52,32 @@ def generate_char(char, text_width):
 # For each entry there, we create a function.
 # Wo do this, to not break the old API.
 
-def draw(char, text):
+def draw(char, text, to_console=True):
+    if len(re.sub('\s', '', text)) == 0:
+        raise Exception('Pass something meaningful to cowsay')
     output = generate_bubble(text)
     text_width = max([len(line) for line in output]) - 4  # 4 is the frame
     output += generate_char(char, text_width)
-    for line in output:
-        print(line)
+    if to_console:
+        for line in output:
+            print(line)
+    return '\n'.join(output)
 
-chars = []
+
+chars = {}
 for char_name, char_lines in CHARS.items():
     def func(text, char_lines=char_lines):
         draw(char_lines, text)
     func.__name__ = char_name
     globals()[char_name] = func
-    chars.append(func)
+    chars[char_name] = func
+    
+
+def get_output_string(char_name, text):
+    if char_name in CHARS:
+        return draw(CHARS[char_name], text, to_console=False)
+    else:
+        raise Exception('Available Characters:', list(CHARS.keys()))
 
 
 def cli():
@@ -79,4 +87,3 @@ def cli():
         exit(0)
 
     cow(' '.join(sys.argv[1:]))
-
