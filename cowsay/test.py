@@ -4,7 +4,25 @@ import unittest
 import io
 import sys
 
-from .main import beavis, cheese, daemon, cow, dragon, ghostbusters, kitty, meow, milk, pig, stegosaurus, stimpy, trex, turkey, turtle, tux, fox
+from .main import (
+    beavis,
+    cheese,
+    daemon,
+    cow,
+    dragon,
+    ghostbusters,
+    kitty,
+    meow,
+    milk,
+    pig,
+    stegosaurus,
+    stimpy,
+    trex,
+    turkey,
+    turtle,
+    tux,
+    fox,
+)
 
 LOREM = """Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
