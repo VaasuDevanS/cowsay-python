@@ -1,6 +1,7 @@
 from __future__ import print_function
 import sys
 import re
+import argparse
 
 from .characters import CHARS
 
@@ -77,13 +78,33 @@ def get_output_string(char_name, text):
     if char_name in CHARS:
         return draw(CHARS[char_name], text, to_console=False)
     else:
-        raise Exception('Available Characters:', list(CHARS.keys()))
+        raise Exception('Available Characters: ', list(CHARS.keys()))
 
 
 def cli():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('echo', help='say something',nargs='?',default='Oops')
+    parser.add_argument('-l', '--list', action='store_true',
+                    help='show characters')
+    parser.add_argument('-v', '--version', action='store_true',
+                    help='show the version')
+    parser.add_argument('-f',  '--character',
+                    help='use specific character')
+    args = parser.parse_args()
 
-    if '--version' in sys.argv[1:]:
+    if args.version:
         print(__version__)
         exit(0)
-
-    cow(' '.join(sys.argv[1:]))
+    
+    if args.list:
+        print('Available Characters:' + ' '.join(CHARS.keys()))
+        exit(0)
+    
+    if args.character is None:
+        cow(args.echo)
+        exit(0)
+    
+    if (args.character in chars):
+        print(get_output_string(args.character, args.echo))
+    else:
+        cow(args.echo)
