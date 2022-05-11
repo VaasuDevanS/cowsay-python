@@ -126,3 +126,55 @@ dict_keys(['beavis', 'cheese', 'daemon', 'cow', 'dragon', 'ghostbusters', 'kitty
 >>> len(cowsay.chars)
 16
 ```
+
+Command Line Usage
+==================
+
+```
+cowsay Hello World
+  ___________
+< Hello World >
+  ===========
+                \
+                 \
+                   ^__^
+                   (oo)\_______
+                   (__)\       )\/\
+                       ||----w |
+                       ||     ||
+
+cowsay --character pig Hello World
+  ___________
+| Hello World |
+  ===========
+           \
+            \
+             \
+              \
+                        ,.
+                       (_|,.
+                       ,' /, )_______   _
+                   __j o``-'        `.'-)'
+                   (")                 \'
+                   `-j                |
+                       `-._(           /
+                           |_\  |--^.  /
+                       /_]'|_| /_)_/
+                           /_]'  /_]'
+
+cowsay Hello World --character tux
+  ___________
+| Hello World |
+  ===========
+                \
+                 \
+                  \
+                   .--.
+                  |o_o |
+                  |:_/ |
+                 //   \ \
+                (|     | )
+               /'\_   _/`\
+               \___)=(___/
+
+```

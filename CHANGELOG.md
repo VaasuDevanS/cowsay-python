@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file
 
 ___
 
+## v4.1 (May 11, 2022)
+
+## Added
+
+- New command line argument "--character" to optionally select character on the CLI (Added
+  by [Justin Flannery](https://github.com/juftin))
+
+___
+
 ## v4.0 (Apr 19, 2021)
 
 ## Added
