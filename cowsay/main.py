@@ -4,7 +4,7 @@ import re
 
 from .characters import CHARS
 
-__version__ = '4.0'
+__version__ = '4.1'
 __name__ = 'cowsay'
 
 
@@ -86,4 +86,17 @@ def cli():
         print(__version__)
         exit(0)
 
-    cow(' '.join(sys.argv[1:]))
+    if '--character' in sys.argv[1:]:
+        character_index = sys.argv.index('--character')
+        try:
+            character = globals()[sys.argv[character_index + 1]]
+            del sys.argv[character_index: character_index + 2]
+        except (KeyError, IndexError):
+            options = ', '.join(char_names)
+            raise LookupError(
+                'Invalid character selection passed. Available options: ' + options
+            )
+    else:
+        character = cow
+
+    character(' '.join(sys.argv[1:]))
