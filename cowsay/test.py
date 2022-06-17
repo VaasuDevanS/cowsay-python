@@ -495,6 +495,44 @@ TUX_SOLUTION = r"""
                                                      \___)=(___/
 """
 
+MIKI_SOLUTION = r"""
+  _________________________________________________
+ /                                                 \
+| Lorem ipsum dolor sit amet, consetetur sadipscing |
+| elitr, sed diamnonumy eirmod tempor invidunt ut   |
+| labore et dolore magna aliquyam erat,sed diam vol |
+| uptua. At vero eos et accusam et justo duo dolore |
+| s et ea rebum.                                    |
+ \                                                 /
+  =================================================
+                                                      \                                                
+                                                       \           &************************&
+                                                        \       &******************************&
+                                                         \    &**********************************&
+                                                            &**************************************&
+                                                          &*****************************************&
+                                                         &*******************************************& 
+                                                        &*********************************************&
+                                                       &***********************************************&
+                                                      &************************************************&
+                                                      &***#########********#########*******************&
+                                                      &*##       ##########          ##################&
+                                                      &*##   O   ##@**####   O       ##***************&
+                                                      &***#########@*******#########*****************&
+                                                      &***********@*********************************&
+                                                      &**********@*********************************&
+                                                      &*********@*********************************&
+                                                      &********@@*********************************&
+                                                       &*******@@@@@@****************************&   
+                                                        &**************************************&
+                                                          &**************************************&
+                                                           &******@@@@@@@@@@@@*********************&
+                                                             &*************************************&   
+                                                               &************************************&
+                                                                     &*******************************&
+                                                                       &*****************************&
+"""
+
 def capture_output(function, arguments):
     captured_output = io.StringIO()
     sys.stdout = captured_output
@@ -602,10 +640,16 @@ class TestCowsay(unittest.TestCase):
         solution = delete_empty_lines(TURTLE_SOLUTION)
         assert output == solution
 
-    def tux_turtle(self):
+    def test_tux(self):
         output = capture_output(tux, (LOREM))
         output = delete_empty_lines(output)
         solution = delete_empty_lines(TUX_SOLUTION)
+        assert output == solution
+        
+    def test_miki(self):
+        output = capture_output(tux, (LOREM))
+        output = delete_empty_lines(output)
+        solution = delete_empty_lines(MIKI_SOLUTION)
         assert output == solution
 
 
