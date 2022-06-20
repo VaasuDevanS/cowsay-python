@@ -530,7 +530,7 @@ class TestCowsay(unittest.TestCase):
         solution = delete_empty_lines(DAEMON_SOLUTION)
         assert output == solution
 
-    def cow_daemon(self):
+    def test_cow(self):
         output = capture_output(cow, (LOREM))
         output = delete_empty_lines(output)
         solution = delete_empty_lines(COW_SOLUTION)
@@ -602,7 +602,7 @@ class TestCowsay(unittest.TestCase):
         solution = delete_empty_lines(TURTLE_SOLUTION)
         assert output == solution
 
-    def tux_turtle(self):
+    def test_tux(self):
         output = capture_output(tux, (LOREM))
         output = delete_empty_lines(output)
         solution = delete_empty_lines(TUX_SOLUTION)
