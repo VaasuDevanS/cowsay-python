@@ -11,6 +11,7 @@ from .main import (
     ghostbusters,
     kitty,
     meow,
+    miki,
     milk,
     pig,
     stegosaurus,

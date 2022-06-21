@@ -8,11 +8,10 @@ __version__ = '4.1'
 __name__ = 'cowsay'
 
 
-char_names = CHARS.keys()
+char_names = list(CHARS.keys())
 
 
 def wrap_lines(lines, max_width=49):
-    # TODO: Wrap a line only at whitespaces
     new_lines = []
     for line in lines:
         for line_part in [
