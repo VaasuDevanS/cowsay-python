@@ -4,15 +4,14 @@ import re
 
 from .characters import CHARS
 
-__version__ = '4.0'
+__version__ = '4.1'
 __name__ = 'cowsay'
 
 
-char_names = CHARS.keys()
+char_names = list(CHARS.keys())
 
 
 def wrap_lines(lines, max_width=49):
-    # TODO: Wrap a line only at whitespaces
     new_lines = []
     for line in lines:
         for line_part in [
@@ -86,4 +85,17 @@ def cli():
         print(__version__)
         exit(0)
 
-    cow(' '.join(sys.argv[1:]))
+    if '--character' in sys.argv[1:]:
+        character_index = sys.argv.index('--character')
+        try:
+            character = globals()[sys.argv[character_index + 1]]
+            del sys.argv[character_index: character_index + 2]
+        except (KeyError, IndexError):
+            options = ', '.join(char_names)
+            raise LookupError(
+                'Invalid character selection passed. Available options: ' + options
+            )
+    else:
+        character = cow
+
+    character(' '.join(sys.argv[1:]))
