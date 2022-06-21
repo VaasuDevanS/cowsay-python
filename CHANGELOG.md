@@ -5,12 +5,17 @@ All notable changes to this project will be documented in this file
 
 ___
 
-## v4.1 (May 11, 2022)
+## v5.0
 
 ## Added
-
 - New command line argument "--character" to optionally select character on the CLI (Added
   by [Justin Flannery](https://github.com/juftin))
+- Github Workflow for automated testing (Added by [Scott Haleen](https://github.com/scotthaleen))
+- <b>New character</b>: Fox (Added by [Scott Haleen](https://github.com/scotthaleen))
+- <b>New character</b>: Miki (Added by [Stefan Matić](https://github.com/stefan-matic))
+
+## Changed
+- Bug fixes in test cases (Added by [Marcus Sá](https://github.com/marcusesa))
 
 ___
 

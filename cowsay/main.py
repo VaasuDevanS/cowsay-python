@@ -4,7 +4,7 @@ import re
 
 from .characters import CHARS
 
-__version__ = '4.1'
+__version__ = '5.0'
 __name__ = 'cowsay'
 
 
