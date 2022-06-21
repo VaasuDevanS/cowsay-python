@@ -533,6 +533,44 @@ TUX_SOLUTION = r"""
                                                      \___)=(___/
 """
 
+MIKI_SOLUTION = r"""
+  _________________________________________________
+ /                                                 \
+| Lorem ipsum dolor sit amet, consetetur sadipscing |
+| elitr, sed diamnonumy eirmod tempor invidunt ut   |
+| labore et dolore magna aliquyam erat,sed diam vol |
+| uptua. At vero eos et accusam et justo duo dolore |
+| s et ea rebum.                                    |
+ \                                                 /
+  =================================================
+                                                      \                                                
+                                                       \           &************************&
+                                                        \       &******************************&
+                                                         \    &**********************************&
+                                                            &**************************************&
+                                                          &*****************************************&
+                                                         &*******************************************& 
+                                                        &*********************************************&
+                                                       &***********************************************&
+                                                      &************************************************&
+                                                      &***#########********#########*******************&
+                                                      &*##       ##########          ##################&
+                                                      &*##   O   ##@**####   O       ##***************&
+                                                      &***#########@*******#########*****************&
+                                                      &***********@*********************************&
+                                                      &**********@*********************************&
+                                                      &*********@*********************************&
+                                                      &********@@*********************************&
+                                                       &*******@@@@@@****************************&   
+                                                        &**************************************&
+                                                          &**************************************&
+                                                           &******@@@@@@@@@@@@*********************&
+                                                             &*************************************&   
+                                                               &************************************&
+                                                                     &*******************************&
+                                                                       &*****************************&
+"""
+
 def capture_output(function, arguments):
     captured_output = io.StringIO()
     sys.stdout = captured_output
@@ -573,12 +611,6 @@ class TestCowsay(unittest.TestCase):
         solution = delete_empty_lines(COW_SOLUTION)
         assert output == solution
 
-    def test_daemon(self):
-        output = capture_output(daemon, (LOREM))
-        output = delete_empty_lines(output)
-        solution = delete_empty_lines(DAEMON_SOLUTION)
-        assert output == solution
-
     def test_dragon(self):
         output = capture_output(dragon, (LOREM))
         output = delete_empty_lines(output)
@@ -607,6 +639,12 @@ class TestCowsay(unittest.TestCase):
         output = capture_output(meow, (LOREM))
         output = delete_empty_lines(output)
         solution = delete_empty_lines(MEOW_SOLUTION)
+        assert output == solution
+        
+    def test_miki(self):
+        output = capture_output(tux, (LOREM))
+        output = delete_empty_lines(output)
+        solution = delete_empty_lines(MIKI_SOLUTION)
         assert output == solution
 
     def test_milk(self):
