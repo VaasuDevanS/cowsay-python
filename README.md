@@ -1,5 +1,6 @@
 # Cowsay
 
+[![cowsay](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml/badge.svg?branch=main)](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml)
 ![](https://pepy.tech/badge/cowsay)
 ![](https://pepy.tech/badge/cowsay/month)
 ![](https://pepy.tech/badge/cowsay/week)
@@ -41,6 +42,7 @@ Basic Usage
                        ||----w |
                        ||     ||
 
+
 >>> print(cowsay.get_output_string('trex', 'Hello (extinct) World'))
   _____________________
 | Hello (extinct) World |
@@ -78,6 +80,7 @@ Basic Usage
                                                       /"       "| /-".:%%%%%%%\
                                                                       ;,-"'`)%%)
                                                                      /"      "|
+
 
 >>> cowsay.dragon('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit rhoncus nibh. Mauris mi mauris, molestie vel metus sit amet, aliquam vulputate nibh.')
   _________________________________________________
@@ -131,7 +134,7 @@ Command Line Usage
 ==================
 
 ```
-cowsay Hello World
+$ cowsay Hello World
   ___________
 < Hello World >
   ===========
@@ -143,7 +146,8 @@ cowsay Hello World
                        ||----w |
                        ||     ||
 
-cowsay --character pig Hello World
+
+$ cowsay --character pig Hello World
   ___________
 | Hello World |
   ===========
@@ -162,7 +166,8 @@ cowsay --character pig Hello World
                        /_]'|_| /_)_/
                            /_]'  /_]'
 
-cowsay Hello World --character tux
+
+$ cowsay Hello World --character tux
   ___________
 | Hello World |
   ===========
