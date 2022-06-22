@@ -5,29 +5,30 @@
 ![](https://pepy.tech/badge/cowsay/month)
 ![](https://pepy.tech/badge/cowsay/week)
 
-A python API / console script for the famous linux-cowsay. <br>
-All contributions / forks are welcome. <br>
-Take a look at CHANGELOG.md for the changes.
+### `Latest version: 5.0 (Release Date: Jun 21, 2022)`
 
-Brief History
-==============
+A python API / console script for the famous linux `cowsay` <br>
+All contributions / pull requests are welcome; Check [here](https://github.com/VaasuDevanS/cowsay-python/graphs/contributors) to see the contributors <br>
+Take a look at [CHANGELOG.md](https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md) for the changes
 
+
+# Brief History
 cowsay for GNU/Linux was initially written in perl by Tony Monroe (tony@nog.net), with suggestions from Shannon Appel (appel@CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito@CSUA.Berkeley.EDU).
 
-Check [here](https://github.com/VaasuDevanS/cowsay-python/graphs/contributors) for the list of contributors for this python package. <br>
-Check [here](https://github.com/VaasuDevanS/cowsay-python/blob/master/CHANGELOG.md) for the change log.
 
-
-Installation
-============
+# Installation
 ```
 pip install cowsay
 ```
 
+# Documentation
+Documentation was generated using [pdoc](https://github.com/mitmproxy/pdoc) using the following command
+```
+pdoc -d google cowsay -o docs
+```
 
-Basic Usage
-===========
 
+# Basic Usage
 ```
 >>> import cowsay
 >>> cowsay.cow('Hello World')
@@ -117,8 +118,7 @@ Basic Usage
 ```
 
 
-More characters
-===============
+# More characters
 ```
 >>> cowsay.char_names
 ['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty', 'meow', 'miki', 'milk', 'pig', 'stegosaurus', 'stimpy', 'trex', 'turkey', 'turtle', 'tux']
@@ -130,9 +130,7 @@ More characters
 18
 ```
 
-Command Line Usage
-==================
-
+# Command Line Usage
 ```
 $ cowsay Hello World
   ___________

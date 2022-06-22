@@ -5,8 +5,6 @@ import re
 from .characters import CHARS
 
 __version__ = '5.0'
-__name__ = 'cowsay'
-
 
 char_names = list(CHARS.keys())
 

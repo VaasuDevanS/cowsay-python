@@ -598,6 +598,10 @@ def debug_diff(output, solution):
 
 class TestCowsay(unittest.TestCase):
 
+    """
+    Test Class for `cowsay`
+    """
+
     def test_beavis(self):
         output = capture_output(beavis, (LOREM))
         output = delete_empty_lines(output)

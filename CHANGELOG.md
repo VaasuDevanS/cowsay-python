@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file
 
 ___
 
-## v5.0
+## v5.0 (Jun 21, 2022)
 
 ## Added
 - New command line argument "--character" to optionally select character on the CLI (Added
