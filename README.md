@@ -1,4 +1,3 @@
-# Cowsay
 
 [![cowsay](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml/badge.svg?branch=main)](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml)
 [![PyPI version](https://badge.fury.io/py/Cowsay.svg)](https://badge.fury.io/py/Cowsay)
@@ -8,29 +7,29 @@
 
 ### `Latest version: 5.0 (Release Date: Jun 21, 2022)`
 
-A python API / console script for the famous linux `cowsay` <br>
-All contributions / pull requests are welcome; Check [here](https://github.com/VaasuDevanS/cowsay-python/graphs/contributors) to see the contributors <br>
-Take a look at [CHANGELOG.md](https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md) for the changes
+> A python API / console script for the famous linux `cowsay` <br>
+> All contributions / pull requests are welcome; Check [here](https://github.com/VaasuDevanS/cowsay-python/graphs/contributors) to see the contributors <br>
+> Take a look at [CHANGELOG.md](https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md) for the changes
 
 
 # Brief History
-cowsay for GNU/Linux was initially written in perl by Tony Monroe (tony@nog.net), with suggestions from Shannon Appel (appel@CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito@CSUA.Berkeley.EDU).
+> cowsay for GNU/Linux was initially written in perl by Tony Monroe (tony@nog.net), with suggestions from Shannon Appel (appel@CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito@CSUA.Berkeley.EDU).
 
 
 # Installation
-```
+```console
 pip install cowsay
 ```
 
 # Documentation
 Documentation was generated using [pdoc](https://github.com/mitmproxy/pdoc) using the following command
-```
+```console
 pdoc -d google cowsay -o docs
 ```
 
 
 # Basic Usage
-```
+```python
 >>> import cowsay
 >>> cowsay.cow('Hello World')
  ___________
@@ -79,13 +78,18 @@ pdoc -d google cowsay -o docs
 
 
 # More characters
-```
+```console
 >>> cowsay.char_names
 ['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty', 'meow', 'miki', 'milk', 'pig', 'stegosaurus', 'stimpy', 'trex', 'turkey', 'turtle', 'tux']
 
 
 >>> cowsay.chars
-{'beavis': <function func at 0x00000220913B4670>, 'cheese': <function func at 0x00000220913B4F70>, 'daemon': <function func at 0x00000220913D40D0>, 'cow': <function func at 0x00000220913D41F0>, 'dragon': <function func at 0x00000220913D4280>, 'fox': <function func at 0x00000220913D4310>, 'ghostbusters': <function func at 0x00000220913D43A0>, 'kitty': <function func at 0x00000220913D4430>, 'meow': <function func at 0x00000220913D44C0>, 'miki': <function func at 0x00000220913D4550>, 'milk': <function func at 0x00000220913D45E0>, 'pig': <function func at 0x00000220913D4670>, 'stegosaurus': <function func at 0x00000220913D4700>, 'stimpy': <function func at 0x00000220913D4790>, 'trex': <function func at 0x00000220913D4820>, 'turkey': <function func at 0x00000220913D48B0>, 'turtle': <function func at 0x00000220913D4940>, 'tux': <function func at 0x00000220913D49D0>}
+{'beavis': <function func at 0x00000220913B4670>, 'cheese': <function func at 0x00000220913B4F70>, 'daemon': <function func at 0x00000220913D40D0>, 
+ 'cow': <function func at 0x00000220913D41F0>, 'dragon': <function func at 0x00000220913D4280>, 'fox': <function func at 0x00000220913D4310>, 
+ 'ghostbusters': <function func at 0x00000220913D43A0>, 'kitty': <function func at 0x00000220913D4430>, 'meow': <function func at 0x00000220913D44C0>, 
+ 'miki': <function func at 0x00000220913D4550>, 'milk': <function func at 0x00000220913D45E0>, 'pig': <function func at 0x00000220913D4670>, 
+ 'stegosaurus': <function func at 0x00000220913D4700>, 'stimpy': <function func at 0x00000220913D4790>, 'trex': <function func at 0x00000220913D4820>, 
+ 'turkey': <function func at 0x00000220913D48B0>, 'turtle': <function func at 0x00000220913D4940>, 'tux': <function func at 0x00000220913D49D0>}
 
 
 >>> len(cowsay.chars)
@@ -474,7 +478,7 @@ pdoc -d google cowsay -o docs
 ```
 
 # Command Line Usage
-```
+```console
 $ cowsay Hello World
   ___________
 | Hello World |
