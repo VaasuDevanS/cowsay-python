@@ -23,7 +23,6 @@
 
         <h2>Contents</h2>
         <ul>
-  <li><a href="#cowsay">Cowsay</a></li>
   <li><a href="#brief-history">Brief History</a></li>
   <li><a href="#installation">Installation</a></li>
   <li><a href="#documentation">Documentation</a></li>
@@ -66,530 +65,537 @@
                     <h1 class="modulename">
 cowsay    </h1>
 
-                        <div class="docstring"><h1 id="cowsay">Cowsay</h1>
-
-<p><a href="https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml"><img src="https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml/badge.svg?branch=main" alt="cowsay" /></a>
+                        <div class="docstring"><p><a href="https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml"><img src="https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml/badge.svg?branch=main" alt="cowsay" /></a>
 <a href="https://badge.fury.io/py/Cowsay"><img src="https://badge.fury.io/py/Cowsay.svg" alt="PyPI version" /></a>
+<a href="https://github.com/VaasuDevanS/cowsay-python"><img src="https://img.shields.io/badge/github-cowsay--python-blue" alt="Github" /></a>
+<a href="https://vaasudevans.github.io/cowsay-python"><img src="https://img.shields.io/badge/documentation-cowsay--python-informational" alt="Documentation" /></a>
+<br>
 <img src="https://pepy.tech/badge/cowsay" alt="" />
 <img src="https://pepy.tech/badge/cowsay/month" alt="" />
 <img src="https://pepy.tech/badge/cowsay/week" alt="" /></p>
 
 <h3 id="latest-version-50-release-date-jun-21-2022"><code>Latest version: 5.0 (Release Date: Jun 21, 2022)</code></h3>
 
-<p>A python API / console script for the famous linux <code><a href="">cowsay</a></code> <br>
-All contributions / pull requests are welcome; Check <a href="https://github.com/VaasuDevanS/cowsay-python/graphs/contributors">here</a> to see the contributors <br>
-Take a look at <a href="https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md">CHANGELOG.md</a> for the changes</p>
+<blockquote>
+  <p>A python API / console script for the famous linux <code><a href="">cowsay</a></code> <br>
+  All contributions / pull requests are welcome; Check <a href="https://github.com/VaasuDevanS/cowsay-python/graphs/contributors">here</a> to see the contributors <br>
+  Take a look at <a href="https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md">CHANGELOG.md</a> for the changes</p>
+</blockquote>
 
 <h1 id="brief-history">Brief History</h1>
 
-<p>cowsay for GNU/Linux was initially written in perl by Tony Monroe (tony@nog.net), with suggestions from Shannon Appel (appel@CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito@CSUA.Berkeley.EDU).</p>
+<blockquote>
+  <p>cowsay for GNU/Linux was initially written in perl by Tony Monroe (tony@nog.net), with suggestions from Shannon Appel (appel@CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito@CSUA.Berkeley.EDU).</p>
+</blockquote>
 
 <h1 id="installation">Installation</h1>
 
-<pre><code>pip install cowsay
-</code></pre>
+<div class="pdoc-code codehilite"><pre><span></span><code><span class="go">pip install cowsay</span>
+</code></pre></div>
 
 <h1 id="documentation">Documentation</h1>
 
 <p>Documentation was generated using <a href="https://github.com/mitmproxy/pdoc">pdoc</a> using the following command</p>
 
-<pre><code>pdoc -d google cowsay -o docs
-</code></pre>
+<div class="pdoc-code codehilite"><pre><span></span><code><span class="go">pdoc -d google cowsay -o docs</span>
+</code></pre></div>
 
 <h1 id="basic-usage">Basic Usage</h1>
 
-<pre><code>&gt;&gt;&gt; import cowsay
-&gt;&gt;&gt; cowsay.cow('Hello World')
- ___________
-| Hello World |
-  ===========
+<div class="pdoc-code codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">cowsay</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cowsay</span><span class="o">.</span><span class="n">cow</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
+ <span class="n">___________</span>
+<span class="o">|</span> <span class="n">Hello</span> <span class="n">World</span> <span class="o">|</span>
+  <span class="o">===========</span>
            \
             \
-              ^__^
-              (oo)\_______
-              (__)\       )\/\
-                  ||----w |
-                  ||     ||
+              <span class="o">^</span><span class="n">__</span><span class="o">^</span>
+              <span class="p">(</span><span class="n">oo</span><span class="p">)</span>\<span class="n">_______</span>
+              <span class="p">(</span><span class="n">__</span><span class="p">)</span>\       <span class="p">)</span>\<span class="o">/</span>\
+                  <span class="o">||----</span><span class="n">w</span> <span class="o">|</span>
+                  <span class="o">||</span>     <span class="o">||</span>
 
 
-&gt;&gt;&gt; print(cowsay.get_output_string('cow', 'Hello World'))
-  ___________
-| Hello World |
-  ===========
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">cowsay</span><span class="o">.</span><span class="n">get_output_string</span><span class="p">(</span><span class="s1">&#39;cow&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello World&#39;</span><span class="p">))</span>
+  <span class="n">___________</span>
+<span class="o">|</span> <span class="n">Hello</span> <span class="n">World</span> <span class="o">|</span>
+  <span class="o">===========</span>
            \
             \
-              ^__^
-              (oo)\_______
-              (__)\       )\/\
-                  ||----w |
-                  ||     ||
+              <span class="o">^</span><span class="n">__</span><span class="o">^</span>
+              <span class="p">(</span><span class="n">oo</span><span class="p">)</span>\<span class="n">_______</span>
+              <span class="p">(</span><span class="n">__</span><span class="p">)</span>\       <span class="p">)</span>\<span class="o">/</span>\
+                  <span class="o">||----</span><span class="n">w</span> <span class="o">|</span>
+                  <span class="o">||</span>     <span class="o">||</span>
 
 
-&gt;&gt;&gt; cowsay.cow('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit rhoncus nibh. Mauris mi mauris, molestie vel metus sit amet, aliquam vulputate nibh.')
-  _________________________________________________
- /                                                 \
-| Lorem ipsum dolor sit amet, consectetur adipiscin |
-| g elit. Mauris blandit rhoncus nibh. Mauris mi ma |
-| uris, molestie vel metus sit amet, aliquam vulput |
-| ate nibh.                                         |
- \                                                 /
-  =================================================
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cowsay</span><span class="o">.</span><span class="n">cow</span><span class="p">(</span><span class="s1">&#39;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit rhoncus nibh. Mauris mi mauris, molestie vel metus sit amet, aliquam vulputate nibh.&#39;</span><span class="p">)</span>
+  <span class="n">_________________________________________________</span>
+ <span class="o">/</span>                                                 \
+<span class="o">|</span> <span class="n">Lorem</span> <span class="n">ipsum</span> <span class="n">dolor</span> <span class="n">sit</span> <span class="n">amet</span><span class="p">,</span> <span class="n">consectetur</span> <span class="n">adipiscin</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">g</span> <span class="n">elit</span><span class="o">.</span> <span class="n">Mauris</span> <span class="n">blandit</span> <span class="n">rhoncus</span> <span class="n">nibh</span><span class="o">.</span> <span class="n">Mauris</span> <span class="n">mi</span> <span class="n">ma</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">uris</span><span class="p">,</span> <span class="n">molestie</span> <span class="n">vel</span> <span class="n">metus</span> <span class="n">sit</span> <span class="n">amet</span><span class="p">,</span> <span class="n">aliquam</span> <span class="n">vulput</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">ate</span> <span class="n">nibh</span><span class="o">.</span>                                         <span class="o">|</span>
+ \                                                 <span class="o">/</span>
+  <span class="o">=================================================</span>
                                                  \
                                                   \
-                                                    ^__^
-                                                    (oo)\_______
-                                                    (__)\       )\/\
-                                                        ||----w |
-                                                        ||     ||
-
-</code></pre>
+                                                    <span class="o">^</span><span class="n">__</span><span class="o">^</span>
+                                                    <span class="p">(</span><span class="n">oo</span><span class="p">)</span>\<span class="n">_______</span>
+                                                    <span class="p">(</span><span class="n">__</span><span class="p">)</span>\       <span class="p">)</span>\<span class="o">/</span>\
+                                                        <span class="o">||----</span><span class="n">w</span> <span class="o">|</span>
+                                                        <span class="o">||</span>     <span class="o">||</span>
+</code></pre></div>
 
 <h1 id="more-characters">More characters</h1>
 
-<pre><code>&gt;&gt;&gt; cowsay.char_names
-['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty', 'meow', 'miki', 'milk', 'pig', 'stegosaurus', 'stimpy', 'trex', 'turkey', 'turtle', 'tux']
+<div class="pdoc-code codehilite"><pre><span></span><code><span class="go">&gt;&gt;&gt; cowsay.char_names</span>
+<span class="go">[&#39;beavis&#39;, &#39;cheese&#39;, &#39;cow&#39;, &#39;daemon&#39;, &#39;dragon&#39;, &#39;fox&#39;, &#39;ghostbusters&#39;, &#39;kitty&#39;, &#39;meow&#39;, &#39;miki&#39;, &#39;milk&#39;, &#39;pig&#39;, &#39;stegosaurus&#39;, &#39;stimpy&#39;, &#39;trex&#39;, &#39;turkey&#39;, &#39;turtle&#39;, &#39;tux&#39;]</span>
 
 
-&gt;&gt;&gt; cowsay.chars
-{'beavis': &lt;function func at 0x00000220913B4670&gt;, 'cheese': &lt;function func at 0x00000220913B4F70&gt;, 'daemon': &lt;function func at 0x00000220913D40D0&gt;, 'cow': &lt;function func at 0x00000220913D41F0&gt;, 'dragon': &lt;function func at 0x00000220913D4280&gt;, 'fox': &lt;function func at 0x00000220913D4310&gt;, 'ghostbusters': &lt;function func at 0x00000220913D43A0&gt;, 'kitty': &lt;function func at 0x00000220913D4430&gt;, 'meow': &lt;function func at 0x00000220913D44C0&gt;, 'miki': &lt;function func at 0x00000220913D4550&gt;, 'milk': &lt;function func at 0x00000220913D45E0&gt;, 'pig': &lt;function func at 0x00000220913D4670&gt;, 'stegosaurus': &lt;function func at 0x00000220913D4700&gt;, 'stimpy': &lt;function func at 0x00000220913D4790&gt;, 'trex': &lt;function func at 0x00000220913D4820&gt;, 'turkey': &lt;function func at 0x00000220913D48B0&gt;, 'turtle': &lt;function func at 0x00000220913D4940&gt;, 'tux': &lt;function func at 0x00000220913D49D0&gt;}
+<span class="go">&gt;&gt;&gt; cowsay.chars</span>
+<span class="go">{&#39;beavis&#39;: &lt;function func at 0x00000220913B4670&gt;, &#39;cheese&#39;: &lt;function func at 0x00000220913B4F70&gt;, &#39;daemon&#39;: &lt;function func at 0x00000220913D40D0&gt;, </span>
+<span class="go"> &#39;cow&#39;: &lt;function func at 0x00000220913D41F0&gt;, &#39;dragon&#39;: &lt;function func at 0x00000220913D4280&gt;, &#39;fox&#39;: &lt;function func at 0x00000220913D4310&gt;, </span>
+<span class="go"> &#39;ghostbusters&#39;: &lt;function func at 0x00000220913D43A0&gt;, &#39;kitty&#39;: &lt;function func at 0x00000220913D4430&gt;, &#39;meow&#39;: &lt;function func at 0x00000220913D44C0&gt;, </span>
+<span class="go"> &#39;miki&#39;: &lt;function func at 0x00000220913D4550&gt;, &#39;milk&#39;: &lt;function func at 0x00000220913D45E0&gt;, &#39;pig&#39;: &lt;function func at 0x00000220913D4670&gt;, </span>
+<span class="go"> &#39;stegosaurus&#39;: &lt;function func at 0x00000220913D4700&gt;, &#39;stimpy&#39;: &lt;function func at 0x00000220913D4790&gt;, &#39;trex&#39;: &lt;function func at 0x00000220913D4820&gt;, </span>
+<span class="go"> &#39;turkey&#39;: &lt;function func at 0x00000220913D48B0&gt;, &#39;turtle&#39;: &lt;function func at 0x00000220913D4940&gt;, &#39;tux&#39;: &lt;function func at 0x00000220913D49D0&gt;}</span>
 
 
-&gt;&gt;&gt; len(cowsay.chars)
-18
+<span class="go">&gt;&gt;&gt; len(cowsay.chars)</span>
+<span class="go">18</span>
 
 
-&gt;&gt;&gt; for char, char_func in cowsay.chars.items():
-...     char_func(f'Hi! I am {char}')
-  _______________
-| Hi! I am beavis |
-  ===============
-                    \
-                     \
-                      \
-                            _------~~-,
-                         ,'            ,
-                         /               \\
-                        /                :
-                       |                  '
-                       |                  |
-                       |                  |
-                        |   _--           |
-                        _| =-.     .-.   ||
-                        o|/o/       _.   |
-                        /  ~          \\ |
-                      (____\@)  ___~    |
-                         |_===~~~.`    |
-                      _______.--~     |
-                      \\________       |
-                               \\      |
-                             __/-___-- -__
-                            /            _ \\
-  _______________
-| Hi! I am cheese |
-  ===============
-               \
-                \
-                 \
-                  \
-                    /     \_/         |
-                   |                 ||
-                   |                 ||
-                  |    ###\  /###   | |
-                  |     0  \/  0    | |
-                 /|                 | |
-                / |        &lt;        |\ \
-               | /|                 | | |
-               | |     \_______/   |  | |
-               | |                 | / /
-               /||                 /|||
-                  ----------------|
-                       | |    | |
-                       ***    ***
-                      /___\  /___\
-  _______________
-| Hi! I am daemon |
-  ===============
-                       \
-                        \
-                         \
-                          \
-                           /- _  `-/  '
-                          (/\/ \ \   /\
-                          / /   | `    \
-                          O O   ) /    |
-                          `-^--'`&lt;     '
-                         (_.)  _  )   /
-                          `.___/`    /
-                            `-----' /
-               &lt;----.     __ / __   \
-               &lt;----|====O)))==) \) /====
-               &lt;----'    `--' `.__,' \
-                            |        |
-                             \       /
-                       ______( (_  / \______
-                     ,'  ,-----'   |        \
-                     `--{__________)        \/
-  ____________
-| Hi! I am cow |
-  ============
-            \
-             \
-               ^__^
-               (oo)\_______
-               (__)\       )\/\
-                   ||----w |
-                   ||     ||
-  _______________
-| Hi! I am dragon |
-  ===============
-                 \
-                  \
-                   \
-                    \
-                                          / \\  //\\
-                           |\\___/|      /   \\//  \\\\
-                           /0  0  \\__  /    //  | \\ \\
-                          /     /  \\/_/    //   |  \\  \\
-                          \@_^_\@'/   \\/_   //    |   \\   \\
-                          //_^_/     \\/_ //     |    \\    \\
-                       ( //) |        \\///      |     \\     \\
-                     ( / /) _|_ /   )  //       |      \\     _\\
-                   ( // /) '/,_ _ _/  ( ; -.    |    _ _\\.-~        .-~~~^-.
-                 (( / / )) ,-{        _      `-.|.-~-.           .~         `.
-                (( // / ))  '/\\      /                 ~-. _ .-~      .-~^-.  \\
-                (( /// ))      `.   {            }                   /      \\  \\
-                 (( / ))     .----~-.\\        \\-'                 .~         \\  `. \\^-.
-                            ///.----..&gt;        \\             _ -~             `.  ^-`  ^-_
-                              ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~
-                                                                                 /.-~
-  ____________
-| Hi! I am fox |
-  ============
-             \
-              \
-               \
-                |\_/|,,_____,~~`
-                (.".)~~     )`~}}
-                 \o/\ /---~\\ ~}}
-                   _//    _// ~}
-  _____________________
-| Hi! I am ghostbusters |
-  =====================
-                             \
-                              \
-                               \
-                                \
-                                            __---__
-                                         _-       /--______
-                                    __--( /     \ )XXXXXXXXXXX\v.
-                                  .-XXX(   O   O  )XXXXXXXXXXXXXXX-
-                                 /XXX(       U     )        XXXXXXX\
-                               /XXXXX(              )--_  XXXXXXXXXXX\
-                              /XXXXX/ (      O     )   XXXXXX   \XXXXX\
-                              XXXXX/   /            XXXXXX   \__ \XXXXX
-                              XXXXXX__/          XXXXXX         \__----&gt;
-                      ---___  XXX__/          XXXXXX      \__         /
-                        \-  --__/   ___/\  XXXXXX            /  ___--/=
-                         \-\    ___/    XXXXXX              '--- XXXXXX
-                            \-\/XXX\ XXXXXX                      /XXXXX
-                              \XXXXXXXXX   \                    /XXXXX/
-                               \XXXXXX      &gt;                 _/XXXXX/
-                                 \XXXXX--__/              __-- XXXX/
-                                  -XXXXXXXX---------------  XXXXXX-
-                                     \XXXXXXXXXXXXXXXXXXXXXXXXXX/
-                                       ""VXXXXXXXXXXXXXXXXXXV""
-  ______________
-| Hi! I am kitty |
-  ==============
-                 \
-                  \
-                   \
-                    \
-                     ("`-'  '-/") .___..--' ' "`-._
-                      ` *_ *  )    `-.   (      ) .`-.__. `)
-                       (_Y_.) ' ._   )   `._` ;  `` -. .-'
-                    _.. `--'_..-_/   /--' _ .' ,4
-                   ( i l ),-''  ( l i),'  ( ( ! .-'
-  _____________
-| Hi! I am meow |
-  =============
-             \
-              \
-               \
-                \
-                               _ ___.--'''`--''//-,-_--_.
-                   \\`"' ` || \\\\ \\ \\\\/ / // / ,-\\\\`,_
-                  /'`  \\ \\ || Y  | \\|/ / // / - |__ `-,
-                 /\@"\\  ` \\ `\\ |  | ||/ // | \\/  \\  `-._`-,_.,
-                /  _.-. `.-\\,___/\\ _/|_/_\\_\\/|_/ |     `-._._)
-                `-'``/  /  |  // \\__/\\__  /  \\__/ \\
-                     `-'  /-\\/  | -|   \\__ \\   |-' |
-                       __/\\ / _/ \\/ __,-'   ) ,' _|'
-                      (((__/(((_.' ((___..-'((__,'
-  _____________
-| Hi! I am miki |
-  =============
-             \                                                      
-              \                  &amp;************************&amp;
-               \             &amp;******************************&amp;
-                \          &amp;**********************************&amp;
-                         &amp;**************************************&amp;
-                       &amp;*****************************************&amp;
-                      &amp;*******************************************&amp; 
-                     &amp;*********************************************&amp;
-                    &amp;***********************************************&amp;
-                   &amp;************************************************&amp;
-                   &amp;***#########********#########*******************&amp;
-                   &amp;*##       ##########          ##################&amp;
-                   &amp;*##   O   ##@**####   O       ##***************&amp;
-                   &amp;***#########@*******#########*****************&amp;
-                   &amp;***********@*********************************&amp;
-                   &amp;**********@*********************************&amp;
-                   &amp;*********@*********************************&amp;
-                   &amp;********@@*********************************&amp;
-                    &amp;*******@@@@@@****************************&amp;   
-                     &amp;**************************************&amp;
-                       &amp;**************************************&amp;
-                        &amp;******@@@@@@@@@@@@*********************&amp;
-                          &amp;*************************************&amp;   
-                            &amp;************************************&amp;
-                                  &amp;*******************************&amp;
-                                    &amp;*****************************&amp;
-  _____________
-| Hi! I am milk |
-  =============
-             \
-              \
-               \
-                \
-                    ____________
-                    |__________|
-                   /           /\
-                  /           /  \
-                 /___________/___/|
-                 |          |     |
-                 |  ==\ /== |     |
-                 |   O   O  | \ \ |
-                 |     &lt;    |  \ \|
-                /|          |   \ \
-               / |  \_____/ |   / /
-              / /|          |  / /|
-             /||\|          | /||\/
-                 -------------|
-                     | |    | |
-                    &lt;__/    \__&gt;
-  ____________
-| Hi! I am pig |
-  ============
-            \
-             \
-              \
-               \
-                         ,.
-                        (_|,.
-                        ,' /, )_______   _
-                    __j o``-'        `.'-)'
-                    (")                 \'
-                    `-j                |
-                      `-._(           /
-                         |_\  |--^.  /
-                        /_]'|_| /_)_/
-                            /_]'  /_]'
-  ____________________
-| Hi! I am stegosaurus |
-  ====================
-                          \
-                           \
-                            \
-                             \
-                                                .       .
-                                               / `.   .' \
-                                       .---.  &lt;    &gt; &lt;    &gt;  .---.
-                                       |    \  \ - ~ ~ - /  /    |
-                           _____        ~-..-~             ~-..-~
-                          |     |   \~~~\.'                    `./~~~/
-                         ---------   \__/                        \__/
-                        .'  O    \     /               /       \  "
-                       (_____,    `._.'               |         }  \/~~~/
-                        `----.          /       }     |        /    \__/
-                              `-.      |       /      |       /      `. ,~~|
-                                  ~-.__|      /_ - ~ ^|      /- _      `..-'   f:  f:
-                                       |     /        |     /     ~-.     `-. _|| _||_
-                                       |_____|        |_____|         ~ - . _ _ _ _ __&gt;
-  _______________
-| Hi! I am stimpy |
-  ===============
-                \
-                 \
-                  \
-                   \
-                       .    _  .
-                      |\_|/__/|
-                      / / \/ \  \
-                     /__|O||O|__ \
-                    |/_ \_/\_/ _\ |
-                    | | (____) | ||
-                    \/\___/\__/  //
-                    (_/         ||
-                     |          ||
-                     |          ||\
-                      \        //_/
-                       \______//
-                      __ || __||
-                     (____(____)
-  _____________
-| Hi! I am trex |
-  =============
-                    \
-                     \
-                      \
-                       \
-                          .-=-==--==--.
-                    ..-=="  ,'o`)      `.
-                  ,'         `"'         \
-                 :  (                     `.__...._
-                 |                  )    /         `-=-.
-                 :       ,vv.-._   /    /               `---==-._
-                  \/\/\/VV ^ d88`;'    /                         `.
-                      ``  ^/d88P!'    /             ,              `._
-                         ^/    !'   ,.      ,      /                  "-,,__,,--'""""-.
-                        ^/    !'  ,'  \ . .(      (         _           )  ) ) ) ))_,-.\
-                       ^(__ ,!',"'   ;:+.:%:a.     \:.. . ,'          )  )  ) ) ,"'    '
-                       ',,,'','     /o:::":%:%a.    \:.:.:         .    )  ) _,'
-                        """'       ;':::'' `+%%%a._  \%:%|         ;.). _,-""
-                               ,-='_.-'      ``:%::)  )%:|        /:._,"
-                              (/(/"           ," ,'_,'%%%:       (_,'
-                                             (  (//(`.___;        \
-                                              \     \    `         `
-                                               `.    `.   `.        :
-                                                 \. . .\    : . . . :
-                                                  \. . .:    `.. . .:
-                                                   `..:.:\     \:...\
-                                                    ;:.:.;      ::...:
-                                                    ):%::       :::::;
-                                                __,::%:(        :::::
-                                             ,;:%%%%%%%:        ;:%::
-                                               ;,--""-.`\  ,=--':%:%:\
-                                              /"       "| /-".:%%%%%%%\
-                                                              ;,-"'`)%%)
-                                                             /"      "|
-  _______________
-| Hi! I am turkey |
-  ===============
-                       \
-                        \
-                         \
-                          \
-                                                            ,+*^^*+___+++_
-                                                      ,*^^^^              )
-                                                   _+*                     ^**+_
-                                                 +^       _ _++*+_+++_,         )
-                             _+^^*+_    (     ,+*^ ^          \\+_        )
-                            {       )  (    ,(    ,_+--+--,      ^)      ^\\
-                           { (\@)    } f   ,(  ,+-^ __*_*_  ^^\\_   ^\\       )
-                          {:;-/    (_+*-+^^^^^+*+*&lt;_ _++_)_    )    )      /
-                         ( /  (    (        ,___    ^*+_+* )   &lt;    &lt;      \\
-                          U _/     )    *--&lt;  ) ^\\-----++__)   )    )       )
-                           (      )  _(^)^^))  )  )\\^^^^^))^*+/    /       /
-                         (      /  (_))_^)) )  )  ))^^^^^))^^^)__/     +^^
-                        (     ,/    (^))^))  )  ) ))^^^^^^^))^^)       _)
-                         *+__+*       (_))^)  ) ) ))^^^^^^))^^^^^)____*^
-                         \\             \\_)^)_)) ))^^^^^^^^^^))^^^^)
-                          (_             ^\\__^^^^^^^^^^^^))^^^^^^^)
-                            ^\\___            ^\\__^^^^^^))^^^^^^^^)\\\\
-                                 ^^^^^\\uuu/^^\\uuu/^^^^\\^\\^\\^\\^\\^\\^\\^\\
-                                    ___) &gt;____) &gt;___   ^\\_\\_\\_\\_\\_\\_\\)
-                                   ^^^//\\\\_^^//\\\\_^       ^(\\_\\_\\_\\)
-                                    ^^^ ^^ ^^^ ^
-  _______________
-| Hi! I am turtle |
-  ===============
-                 \
-                  \
-                   \
-                    \
-                                               ___-------___
-                                           _-~~             ~~-_
-                                        _-~                    /~-_
-                      /^\__/^\         /~  \                   /    \
-                    /|  O|| O|        /      \_______________/        \
-                   | |___||__|      /       /                \          \
-                   |          \    /      /                    \          \
-                   |   (_______) /______/                        \_________ \
-                   |         / /         \                      /            \
-                    \         \^\\         \                  /               \     /
-                      \         ||           \______________/      _-_       //\__//
-                        \       ||------_-~~-_ ------------- \ --/~   ~\    || __/
-                          ~-----||====/~     |==================|       |/~~~~~
-                           (_(__/  ./     /                    \_\      \.
-                                  (_(___/                         \_____)_)
-  ____________
-| Hi! I am tux |
-  ============
-                 \
-                  \
-                   \
-                    .--.
-                   |o_o |
-                   |:_/ |
-                  //   \ \
-                 (|     | )
-                /'\_   _/`\
-                \___)=(___/
-
-</code></pre>
+<span class="go">&gt;&gt;&gt; for char, char_func in cowsay.chars.items():</span>
+<span class="go">...     char_func(f&#39;Hi! I am {char}&#39;)</span>
+<span class="go">  _______________</span>
+<span class="go">| Hi! I am beavis |</span>
+<span class="go">  ===============</span>
+<span class="go">                    \</span>
+<span class="go">                     \</span>
+<span class="go">                      \</span>
+<span class="go">                            _------~~-,</span>
+<span class="go">                         ,&#39;            ,</span>
+<span class="go">                         /               \\</span>
+<span class="go">                        /                :</span>
+<span class="go">                       |                  &#39;</span>
+<span class="go">                       |                  |</span>
+<span class="go">                       |                  |</span>
+<span class="go">                        |   _--           |</span>
+<span class="go">                        _| =-.     .-.   ||</span>
+<span class="go">                        o|/o/       _.   |</span>
+<span class="go">                        /  ~          \\ |</span>
+<span class="go">                      (____\@)  ___~    |</span>
+<span class="go">                         |_===~~~.`    |</span>
+<span class="go">                      _______.--~     |</span>
+<span class="go">                      \\________       |</span>
+<span class="go">                               \\      |</span>
+<span class="go">                             __/-___-- -__</span>
+<span class="go">                            /            _ \\</span>
+<span class="go">  _______________</span>
+<span class="go">| Hi! I am cheese |</span>
+<span class="go">  ===============</span>
+<span class="go">               \</span>
+<span class="go">                \</span>
+<span class="go">                 \</span>
+<span class="go">                  \</span>
+<span class="go">                    /     \_/         |</span>
+<span class="go">                   |                 ||</span>
+<span class="go">                   |                 ||</span>
+<span class="go">                  |    ###\  /###   | |</span>
+<span class="go">                  |     0  \/  0    | |</span>
+<span class="go">                 /|                 | |</span>
+<span class="go">                / |        &lt;        |\ \</span>
+<span class="go">               | /|                 | | |</span>
+<span class="go">               | |     \_______/   |  | |</span>
+<span class="go">               | |                 | / /</span>
+<span class="go">               /||                 /|||</span>
+<span class="go">                  ----------------|</span>
+<span class="go">                       | |    | |</span>
+<span class="go">                       ***    ***</span>
+<span class="go">                      /___\  /___\</span>
+<span class="go">  _______________</span>
+<span class="go">| Hi! I am daemon |</span>
+<span class="go">  ===============</span>
+<span class="go">                       \</span>
+<span class="go">                        \</span>
+<span class="go">                         \</span>
+<span class="go">                          \</span>
+<span class="go">                           /- _  `-/  &#39;</span>
+<span class="go">                          (/\/ \ \   /\</span>
+<span class="go">                          / /   | `    \</span>
+<span class="go">                          O O   ) /    |</span>
+<span class="go">                          `-^--&#39;`&lt;     &#39;</span>
+<span class="go">                         (_.)  _  )   /</span>
+<span class="go">                          `.___/`    /</span>
+<span class="go">                            `-----&#39; /</span>
+<span class="go">               &lt;----.     __ / __   \</span>
+<span class="go">               &lt;----|====O)))==) \) /====</span>
+<span class="go">               &lt;----&#39;    `--&#39; `.__,&#39; \</span>
+<span class="go">                            |        |</span>
+<span class="go">                             \       /</span>
+<span class="go">                       ______( (_  / \______</span>
+<span class="go">                     ,&#39;  ,-----&#39;   |        \</span>
+<span class="go">                     `--{__________)        \/</span>
+<span class="go">  ____________</span>
+<span class="go">| Hi! I am cow |</span>
+<span class="go">  ============</span>
+<span class="go">            \</span>
+<span class="go">             \</span>
+<span class="go">               ^__^</span>
+<span class="go">               (oo)\_______</span>
+<span class="go">               (__)\       )\/\</span>
+<span class="go">                   ||----w |</span>
+<span class="go">                   ||     ||</span>
+<span class="go">  _______________</span>
+<span class="go">| Hi! I am dragon |</span>
+<span class="go">  ===============</span>
+<span class="go">                 \</span>
+<span class="go">                  \</span>
+<span class="go">                   \</span>
+<span class="go">                    \</span>
+<span class="go">                                          / \\  //\\</span>
+<span class="go">                           |\\___/|      /   \\//  \\\\</span>
+<span class="go">                           /0  0  \\__  /    //  | \\ \\</span>
+<span class="go">                          /     /  \\/_/    //   |  \\  \\</span>
+<span class="go">                          \@_^_\@&#39;/   \\/_   //    |   \\   \\</span>
+<span class="go">                          //_^_/     \\/_ //     |    \\    \\</span>
+<span class="go">                       ( //) |        \\///      |     \\     \\</span>
+<span class="go">                     ( / /) _|_ /   )  //       |      \\     _\\</span>
+<span class="go">                   ( // /) &#39;/,_ _ _/  ( ; -.    |    _ _\\.-~        .-~~~^-.</span>
+<span class="go">                 (( / / )) ,-{        _      `-.|.-~-.           .~         `.</span>
+<span class="go">                (( // / ))  &#39;/\\      /                 ~-. _ .-~      .-~^-.  \\</span>
+<span class="go">                (( /// ))      `.   {            }                   /      \\  \\</span>
+<span class="go">                 (( / ))     .----~-.\\        \\-&#39;                 .~         \\  `. \\^-.</span>
+<span class="go">                            ///.----..&gt;        \\             _ -~             `.  ^-`  ^-_</span>
+<span class="go">                              ///-._ _ _ _ _ _ _}^ - - - - ~                     ~-- ,.-~</span>
+<span class="go">                                                                                 /.-~</span>
+<span class="go">  ____________</span>
+<span class="go">| Hi! I am fox |</span>
+<span class="go">  ============</span>
+<span class="go">             \</span>
+<span class="go">              \</span>
+<span class="go">               \</span>
+<span class="go">                |\_/|,,_____,~~`</span>
+<span class="go">                (.&quot;.)~~     )`~}}</span>
+<span class="go">                 \o/\ /---~\\ ~}}</span>
+<span class="go">                   _//    _// ~}</span>
+<span class="go">  _____________________</span>
+<span class="go">| Hi! I am ghostbusters |</span>
+<span class="go">  =====================</span>
+<span class="go">                             \</span>
+<span class="go">                              \</span>
+<span class="go">                               \</span>
+<span class="go">                                \</span>
+<span class="go">                                            __---__</span>
+<span class="go">                                         _-       /--______</span>
+<span class="go">                                    __--( /     \ )XXXXXXXXXXX\v.</span>
+<span class="go">                                  .-XXX(   O   O  )XXXXXXXXXXXXXXX-</span>
+<span class="go">                                 /XXX(       U     )        XXXXXXX\</span>
+<span class="go">                               /XXXXX(              )--_  XXXXXXXXXXX\</span>
+<span class="go">                              /XXXXX/ (      O     )   XXXXXX   \XXXXX\</span>
+<span class="go">                              XXXXX/   /            XXXXXX   \__ \XXXXX</span>
+<span class="go">                              XXXXXX__/          XXXXXX         \__----&gt;</span>
+<span class="go">                      ---___  XXX__/          XXXXXX      \__         /</span>
+<span class="go">                        \-  --__/   ___/\  XXXXXX            /  ___--/=</span>
+<span class="go">                         \-\    ___/    XXXXXX              &#39;--- XXXXXX</span>
+<span class="go">                            \-\/XXX\ XXXXXX                      /XXXXX</span>
+<span class="go">                              \XXXXXXXXX   \                    /XXXXX/</span>
+<span class="go">                               \XXXXXX      &gt;                 _/XXXXX/</span>
+<span class="go">                                 \XXXXX--__/              __-- XXXX/</span>
+<span class="go">                                  -XXXXXXXX---------------  XXXXXX-</span>
+<span class="go">                                     \XXXXXXXXXXXXXXXXXXXXXXXXXX/</span>
+<span class="go">                                       &quot;&quot;VXXXXXXXXXXXXXXXXXXV&quot;&quot;</span>
+<span class="go">  ______________</span>
+<span class="go">| Hi! I am kitty |</span>
+<span class="go">  ==============</span>
+<span class="go">                 \</span>
+<span class="go">                  \</span>
+<span class="go">                   \</span>
+<span class="go">                    \</span>
+<span class="go">                     (&quot;`-&#39;  &#39;-/&quot;) .___..--&#39; &#39; &quot;`-._</span>
+<span class="go">                      ` *_ *  )    `-.   (      ) .`-.__. `)</span>
+<span class="go">                       (_Y_.) &#39; ._   )   `._` ;  `` -. .-&#39;</span>
+<span class="go">                    _.. `--&#39;_..-_/   /--&#39; _ .&#39; ,4</span>
+<span class="go">                   ( i l ),-&#39;&#39;  ( l i),&#39;  ( ( ! .-&#39;</span>
+<span class="go">  _____________</span>
+<span class="go">| Hi! I am meow |</span>
+<span class="go">  =============</span>
+<span class="go">             \</span>
+<span class="go">              \</span>
+<span class="go">               \</span>
+<span class="go">                \</span>
+<span class="go">                               _ ___.--&#39;&#39;&#39;`--&#39;&#39;//-,-_--_.</span>
+<span class="go">                   \\`&quot;&#39; ` || \\\\ \\ \\\\/ / // / ,-\\\\`,_</span>
+<span class="go">                  /&#39;`  \\ \\ || Y  | \\|/ / // / - |__ `-,</span>
+<span class="go">                 /\@&quot;\\  ` \\ `\\ |  | ||/ // | \\/  \\  `-._`-,_.,</span>
+<span class="go">                /  _.-. `.-\\,___/\\ _/|_/_\\_\\/|_/ |     `-._._)</span>
+<span class="go">                `-&#39;``/  /  |  // \\__/\\__  /  \\__/ \\</span>
+<span class="go">                     `-&#39;  /-\\/  | -|   \\__ \\   |-&#39; |</span>
+<span class="go">                       __/\\ / _/ \\/ __,-&#39;   ) ,&#39; _|&#39;</span>
+<span class="go">                      (((__/(((_.&#39; ((___..-&#39;((__,&#39;</span>
+<span class="go">  _____________</span>
+<span class="go">| Hi! I am miki |</span>
+<span class="go">  =============</span>
+<span class="go">             \                                                      </span>
+<span class="go">              \                  &amp;************************&amp;</span>
+<span class="go">               \             &amp;******************************&amp;</span>
+<span class="go">                \          &amp;**********************************&amp;</span>
+<span class="go">                         &amp;**************************************&amp;</span>
+<span class="go">                       &amp;*****************************************&amp;</span>
+<span class="go">                      &amp;*******************************************&amp; </span>
+<span class="go">                     &amp;*********************************************&amp;</span>
+<span class="go">                    &amp;***********************************************&amp;</span>
+<span class="go">                   &amp;************************************************&amp;</span>
+<span class="go">                   &amp;***#########********#########*******************&amp;</span>
+<span class="go">                   &amp;*##       ##########          ##################&amp;</span>
+<span class="go">                   &amp;*##   O   ##@**####   O       ##***************&amp;</span>
+<span class="go">                   &amp;***#########@*******#########*****************&amp;</span>
+<span class="go">                   &amp;***********@*********************************&amp;</span>
+<span class="go">                   &amp;**********@*********************************&amp;</span>
+<span class="go">                   &amp;*********@*********************************&amp;</span>
+<span class="go">                   &amp;********@@*********************************&amp;</span>
+<span class="go">                    &amp;*******@@@@@@****************************&amp;   </span>
+<span class="go">                     &amp;**************************************&amp;</span>
+<span class="go">                       &amp;**************************************&amp;</span>
+<span class="go">                        &amp;******@@@@@@@@@@@@*********************&amp;</span>
+<span class="go">                          &amp;*************************************&amp;   </span>
+<span class="go">                            &amp;************************************&amp;</span>
+<span class="go">                                  &amp;*******************************&amp;</span>
+<span class="go">                                    &amp;*****************************&amp;</span>
+<span class="go">  _____________</span>
+<span class="go">| Hi! I am milk |</span>
+<span class="go">  =============</span>
+<span class="go">             \</span>
+<span class="go">              \</span>
+<span class="go">               \</span>
+<span class="go">                \</span>
+<span class="go">                    ____________</span>
+<span class="go">                    |__________|</span>
+<span class="go">                   /           /\</span>
+<span class="go">                  /           /  \</span>
+<span class="go">                 /___________/___/|</span>
+<span class="go">                 |          |     |</span>
+<span class="go">                 |  ==\ /== |     |</span>
+<span class="go">                 |   O   O  | \ \ |</span>
+<span class="go">                 |     &lt;    |  \ \|</span>
+<span class="go">                /|          |   \ \</span>
+<span class="go">               / |  \_____/ |   / /</span>
+<span class="go">              / /|          |  / /|</span>
+<span class="go">             /||\|          | /||\/</span>
+<span class="go">                 -------------|</span>
+<span class="go">                     | |    | |</span>
+<span class="go">                    &lt;__/    \__&gt;</span>
+<span class="go">  ____________</span>
+<span class="go">| Hi! I am pig |</span>
+<span class="go">  ============</span>
+<span class="go">            \</span>
+<span class="go">             \</span>
+<span class="go">              \</span>
+<span class="go">               \</span>
+<span class="go">                         ,.</span>
+<span class="go">                        (_|,.</span>
+<span class="go">                        ,&#39; /, )_______   _</span>
+<span class="go">                    __j o``-&#39;        `.&#39;-)&#39;</span>
+<span class="go">                    (&quot;)                 \&#39;</span>
+<span class="go">                    `-j                |</span>
+<span class="go">                      `-._(           /</span>
+<span class="go">                         |_\  |--^.  /</span>
+<span class="go">                        /_]&#39;|_| /_)_/</span>
+<span class="go">                            /_]&#39;  /_]&#39;</span>
+<span class="go">  ____________________</span>
+<span class="go">| Hi! I am stegosaurus |</span>
+<span class="go">  ====================</span>
+<span class="go">                          \</span>
+<span class="go">                           \</span>
+<span class="go">                            \</span>
+<span class="go">                             \</span>
+<span class="go">                                                .       .</span>
+<span class="go">                                               / `.   .&#39; \</span>
+<span class="go">                                       .---.  &lt;    &gt; &lt;    &gt;  .---.</span>
+<span class="go">                                       |    \  \ - ~ ~ - /  /    |</span>
+<span class="go">                           _____        ~-..-~             ~-..-~</span>
+<span class="go">                          |     |   \~~~\.&#39;                    `./~~~/</span>
+<span class="go">                         ---------   \__/                        \__/</span>
+<span class="go">                        .&#39;  O    \     /               /       \  &quot;</span>
+<span class="go">                       (_____,    `._.&#39;               |         }  \/~~~/</span>
+<span class="go">                        `----.          /       }     |        /    \__/</span>
+<span class="go">                              `-.      |       /      |       /      `. ,~~|</span>
+<span class="go">                                  ~-.__|      /_ - ~ ^|      /- _      `..-&#39;   f:  f:</span>
+<span class="go">                                       |     /        |     /     ~-.     `-. _|| _||_</span>
+<span class="go">                                       |_____|        |_____|         ~ - . _ _ _ _ __&gt;</span>
+<span class="go">  _______________</span>
+<span class="go">| Hi! I am stimpy |</span>
+<span class="go">  ===============</span>
+<span class="go">                \</span>
+<span class="go">                 \</span>
+<span class="go">                  \</span>
+<span class="go">                   \</span>
+<span class="go">                       .    _  .</span>
+<span class="go">                      |\_|/__/|</span>
+<span class="go">                      / / \/ \  \</span>
+<span class="go">                     /__|O||O|__ \</span>
+<span class="go">                    |/_ \_/\_/ _\ |</span>
+<span class="go">                    | | (____) | ||</span>
+<span class="go">                    \/\___/\__/  //</span>
+<span class="go">                    (_/         ||</span>
+<span class="go">                     |          ||</span>
+<span class="go">                     |          ||\</span>
+<span class="go">                      \        //_/</span>
+<span class="go">                       \______//</span>
+<span class="go">                      __ || __||</span>
+<span class="go">                     (____(____)</span>
+<span class="go">  _____________</span>
+<span class="go">| Hi! I am trex |</span>
+<span class="go">  =============</span>
+<span class="go">                    \</span>
+<span class="go">                     \</span>
+<span class="go">                      \</span>
+<span class="go">                       \</span>
+<span class="go">                          .-=-==--==--.</span>
+<span class="go">                    ..-==&quot;  ,&#39;o`)      `.</span>
+<span class="go">                  ,&#39;         `&quot;&#39;         \</span>
+<span class="go">                 :  (                     `.__...._</span>
+<span class="go">                 |                  )    /         `-=-.</span>
+<span class="go">                 :       ,vv.-._   /    /               `---==-._</span>
+<span class="go">                  \/\/\/VV ^ d88`;&#39;    /                         `.</span>
+<span class="go">                      ``  ^/d88P!&#39;    /             ,              `._</span>
+<span class="go">                         ^/    !&#39;   ,.      ,      /                  &quot;-,,__,,--&#39;&quot;&quot;&quot;&quot;-.</span>
+<span class="go">                        ^/    !&#39;  ,&#39;  \ . .(      (         _           )  ) ) ) ))_,-.\</span>
+<span class="go">                       ^(__ ,!&#39;,&quot;&#39;   ;:+.:%:a.     \:.. . ,&#39;          )  )  ) ) ,&quot;&#39;    &#39;</span>
+<span class="go">                       &#39;,,,&#39;&#39;,&#39;     /o:::&quot;:%:%a.    \:.:.:         .    )  ) _,&#39;</span>
+<span class="go">                        &quot;&quot;&quot;&#39;       ;&#39;:::&#39;&#39; `+%%%a._  \%:%|         ;.). _,-&quot;&quot;</span>
+<span class="go">                               ,-=&#39;_.-&#39;      ``:%::)  )%:|        /:._,&quot;</span>
+<span class="go">                              (/(/&quot;           ,&quot; ,&#39;_,&#39;%%%:       (_,&#39;</span>
+<span class="go">                                             (  (//(`.___;        \</span>
+<span class="go">                                              \     \    `         `</span>
+<span class="go">                                               `.    `.   `.        :</span>
+<span class="go">                                                 \. . .\    : . . . :</span>
+<span class="go">                                                  \. . .:    `.. . .:</span>
+<span class="go">                                                   `..:.:\     \:...\</span>
+<span class="go">                                                    ;:.:.;      ::...:</span>
+<span class="go">                                                    ):%::       :::::;</span>
+<span class="go">                                                __,::%:(        :::::</span>
+<span class="go">                                             ,;:%%%%%%%:        ;:%::</span>
+<span class="go">                                               ;,--&quot;&quot;-.`\  ,=--&#39;:%:%:\</span>
+<span class="go">                                              /&quot;       &quot;| /-&quot;.:%%%%%%%\</span>
+<span class="go">                                                              ;,-&quot;&#39;`)%%)</span>
+<span class="go">                                                             /&quot;      &quot;|</span>
+<span class="go">  _______________</span>
+<span class="go">| Hi! I am turkey |</span>
+<span class="go">  ===============</span>
+<span class="go">                       \</span>
+<span class="go">                        \</span>
+<span class="go">                         \</span>
+<span class="go">                          \</span>
+<span class="go">                                                            ,+*^^*+___+++_</span>
+<span class="go">                                                      ,*^^^^              )</span>
+<span class="go">                                                   _+*                     ^**+_</span>
+<span class="go">                                                 +^       _ _++*+_+++_,         )</span>
+<span class="go">                             _+^^*+_    (     ,+*^ ^          \\+_        )</span>
+<span class="go">                            {       )  (    ,(    ,_+--+--,      ^)      ^\\</span>
+<span class="go">                           { (\@)    } f   ,(  ,+-^ __*_*_  ^^\\_   ^\\       )</span>
+<span class="go">                          {:;-/    (_+*-+^^^^^+*+*&lt;_ _++_)_    )    )      /</span>
+<span class="go">                         ( /  (    (        ,___    ^*+_+* )   &lt;    &lt;      \\</span>
+<span class="go">                          U _/     )    *--&lt;  ) ^\\-----++__)   )    )       )</span>
+<span class="go">                           (      )  _(^)^^))  )  )\\^^^^^))^*+/    /       /</span>
+<span class="go">                         (      /  (_))_^)) )  )  ))^^^^^))^^^)__/     +^^</span>
+<span class="go">                        (     ,/    (^))^))  )  ) ))^^^^^^^))^^)       _)</span>
+<span class="go">                         *+__+*       (_))^)  ) ) ))^^^^^^))^^^^^)____*^</span>
+<span class="go">                         \\             \\_)^)_)) ))^^^^^^^^^^))^^^^)</span>
+<span class="go">                          (_             ^\\__^^^^^^^^^^^^))^^^^^^^)</span>
+<span class="go">                            ^\\___            ^\\__^^^^^^))^^^^^^^^)\\\\</span>
+<span class="go">                                 ^^^^^\\uuu/^^\\uuu/^^^^\\^\\^\\^\\^\\^\\^\\^\\</span>
+<span class="go">                                    ___) &gt;____) &gt;___   ^\\_\\_\\_\\_\\_\\_\\)</span>
+<span class="go">                                   ^^^//\\\\_^^//\\\\_^       ^(\\_\\_\\_\\)</span>
+<span class="go">                                    ^^^ ^^ ^^^ ^</span>
+<span class="go">  _______________</span>
+<span class="go">| Hi! I am turtle |</span>
+<span class="go">  ===============</span>
+<span class="go">                 \</span>
+<span class="go">                  \</span>
+<span class="go">                   \</span>
+<span class="go">                    \</span>
+<span class="go">                                               ___-------___</span>
+<span class="go">                                           _-~~             ~~-_</span>
+<span class="go">                                        _-~                    /~-_</span>
+<span class="go">                      /^\__/^\         /~  \                   /    \</span>
+<span class="go">                    /|  O|| O|        /      \_______________/        \</span>
+<span class="go">                   | |___||__|      /       /                \          \</span>
+<span class="go">                   |          \    /      /                    \          \</span>
+<span class="go">                   |   (_______) /______/                        \_________ \</span>
+<span class="go">                   |         / /         \                      /            \</span>
+<span class="go">                    \         \^\\         \                  /               \     /</span>
+<span class="go">                      \         ||           \______________/      _-_       //\__//</span>
+<span class="go">                        \       ||------_-~~-_ ------------- \ --/~   ~\    || __/</span>
+<span class="go">                          ~-----||====/~     |==================|       |/~~~~~</span>
+<span class="go">                           (_(__/  ./     /                    \_\      \.</span>
+<span class="go">                                  (_(___/                         \_____)_)</span>
+<span class="go">  ____________</span>
+<span class="go">| Hi! I am tux |</span>
+<span class="go">  ============</span>
+<span class="go">                 \</span>
+<span class="go">                  \</span>
+<span class="go">                   \</span>
+<span class="go">                    .--.</span>
+<span class="go">                   |o_o |</span>
+<span class="go">                   |:_/ |</span>
+<span class="go">                  //   \ \</span>
+<span class="go">                 (|     | )</span>
+<span class="go">                /&#39;\_   _/`\</span>
+<span class="go">                \___)=(___/</span>
+</code></pre></div>
 
 <h1 id="command-line-usage">Command Line Usage</h1>
 
-<pre><code>$ cowsay Hello World
-  ___________
-| Hello World |
-  ===========
-           \
-            \
-              ^__^
-              (oo)\_______
-              (__)\       )\/\
-                  ||----w |
-                  ||     ||
+<div class="pdoc-code codehilite"><pre><span></span><code><span class="gp">$ </span>cowsay Hello World
+<span class="go">  ___________</span>
+<span class="go">| Hello World |</span>
+<span class="go">  ===========</span>
+<span class="go">           \</span>
+<span class="go">            \</span>
+<span class="go">              ^__^</span>
+<span class="go">              (oo)\_______</span>
+<span class="go">              (__)\       )\/\</span>
+<span class="go">                  ||----w |</span>
+<span class="go">                  ||     ||</span>
 
 
-$ cowsay --character pig Hello World
-  ___________
-| Hello World |
-  ===========
-           \
-            \
-             \
-              \
-                        ,.
-                       (_|,.
-                       ,' /, )_______   _
-                   __j o``-'        `.'-)'
-                   (")                 \'
-                   `-j                |
-                       `-._(           /
-                           |_\  |--^.  /
-                       /_]'|_| /_)_/
-                           /_]'  /_]'
+<span class="gp">$ </span>cowsay --character pig Hello World
+<span class="go">  ___________</span>
+<span class="go">| Hello World |</span>
+<span class="go">  ===========</span>
+<span class="go">           \</span>
+<span class="go">            \</span>
+<span class="go">             \</span>
+<span class="go">              \</span>
+<span class="go">                        ,.</span>
+<span class="go">                       (_|,.</span>
+<span class="go">                       ,&#39; /, )_______   _</span>
+<span class="go">                   __j o``-&#39;        `.&#39;-)&#39;</span>
+<span class="go">                   (&quot;)                 \&#39;</span>
+<span class="go">                   `-j                |</span>
+<span class="go">                       `-._(           /</span>
+<span class="go">                           |_\  |--^.  /</span>
+<span class="go">                       /_]&#39;|_| /_)_/</span>
+<span class="go">                           /_]&#39;  /_]&#39;</span>
 
 
-$ cowsay Hello World --character tux
-  ___________
-| Hello World |
-  ===========
-                \
-                 \
-                  \
-                   .--.
-                  |o_o |
-                  |:_/ |
-                 //   \ \
-                (|     | )
-               /'\_   _/`\
-               \___)=(___/
-
-</code></pre>
+<span class="gp">$ </span>cowsay Hello World --character tux
+<span class="go">  ___________</span>
+<span class="go">| Hello World |</span>
+<span class="go">  ===========</span>
+<span class="go">                \</span>
+<span class="go">                 \</span>
+<span class="go">                  \</span>
+<span class="go">                   .--.</span>
+<span class="go">                  |o_o |</span>
+<span class="go">                  |:_/ |</span>
+<span class="go">                 //   \ \</span>
+<span class="go">                (|     | )</span>
+<span class="go">               /&#39;\_   _/`\</span>
+<span class="go">               \___)=(___/</span>
+</code></pre></div>
 
 <h1 id="change-log">Change Log</h1>
 
