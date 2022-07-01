@@ -1,6 +1,9 @@
 
 [![cowsay](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml/badge.svg?branch=main)](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml)
 [![PyPI version](https://badge.fury.io/py/Cowsay.svg)](https://badge.fury.io/py/Cowsay)
+[![Github](https://img.shields.io/badge/github-cowsay--python-blue)](https://github.com/VaasuDevanS/cowsay-python)
+[![Documentation](https://img.shields.io/badge/documentation-cowsay--python-informational)](https://vaasudevans.github.io/cowsay-python)
+<br>
 ![](https://pepy.tech/badge/cowsay)
 ![](https://pepy.tech/badge/cowsay/month)
 ![](https://pepy.tech/badge/cowsay/week)
