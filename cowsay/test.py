@@ -620,6 +620,12 @@ class TestCowsay(unittest.TestCase):
         solution = delete_empty_lines(COW_SOLUTION)
         assert output == solution
 
+    def test_daemon(self):
+        output = capture_output(daemon, (LOREM))
+        output = delete_empty_lines(output)
+        solution = delete_empty_lines(DAEMON_SOLUTION)
+        assert output == solution
+
     def test_dragon(self):
         output = capture_output(dragon, (LOREM))
         output = delete_empty_lines(output)
