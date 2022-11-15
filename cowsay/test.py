@@ -569,7 +569,7 @@ MIKI_SOLUTION = r"""
                                                               &*************************************&
                                                                 &************************************&
                                                                       &*******************************&
-                                                                        &*****************************& 
+                                                                        &*****************************&
 """
 
 
@@ -649,7 +649,7 @@ class TestCowsay(unittest.TestCase):
         output = delete_empty_lines(output)
         solution = delete_empty_lines(MEOW_SOLUTION)
         assert output == solution
-        
+
     def test_miki(self):
         output = capture_output(miki, (LOREM))
         output = delete_empty_lines(output)
