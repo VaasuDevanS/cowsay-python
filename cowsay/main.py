@@ -70,11 +70,12 @@ for char_name, char_lines in CHARS.items():
     chars[char_name] = func
     
 
-def get_output_string(char_name, text):
-    if char_name in CHARS:
-        return draw(CHARS[char_name], text, to_console=False)
+def get_output_string(char, text):
+    if char in CHARS:
+        return draw(CHARS[char], text, to_console=False)
+
     else:
-        raise Exception('Available Characters:', list(CHARS.keys()))
+        return draw(char, text, to_console=False)
 
 
 def cli():
