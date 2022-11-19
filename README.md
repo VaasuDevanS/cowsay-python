@@ -99,7 +99,7 @@ pdoc -d google cowsay -o docs
 # More characters
 - Custom characters
 ```console
->>> cowsay.get_output_string('custom character here', 'your text')
+>>> print(cowsay.get_output_string('custom character here', 'your text'))
   _________
 | your text |
   =========
@@ -112,7 +112,7 @@ pdoc -d google cowsay -o docs
     ( ._> /
      `---'
 '''
->>> console.get_output_string(duck, 'I am a duck')
+>>> print(console.get_output_string(duck, 'I am a duck'))
   ___________
 | I am a duck |
   ===========
