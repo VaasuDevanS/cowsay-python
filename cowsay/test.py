@@ -1,8 +1,6 @@
-# We are using this tests to be sure, the output will not change
+# We are using these tests to be sure the output will not change
 
-import unittest
-import io
-import sys
+import unittest, io,sys
 
 from .main import (
     beavis,
