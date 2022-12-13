@@ -10,7 +10,7 @@ char_names = list(CHARS.keys())
 def wrap_lines(
     lines: list,
     max_width: int = 49
-    ) -> list:
+    ) -> list[str]:
     """
     wrap_lines(lines, max width) -> wrapped lines
 
@@ -18,7 +18,7 @@ def wrap_lines(
 
     :param lines list: List of lines
     :param max_width int: Max width
-    :returns list: Wrapped lines
+    :returns list[str]: Wrapped lines
     """
 
     new_lines = []
@@ -33,25 +33,25 @@ def wrap_lines(
 
 def generate_bubble(
     text: str
-    ) -> list:
+    ) -> list[str]:
     """
     generate_bubble(text) -> bubble
 
     Creates a chat bubble around the text
 
     :param text str: Text to put in the bubble
-    :returns list: The bubble
+    :returns list[str]: The bubble
     """
 
     lines = [
         line.strip()
         for line in str(text).split("\n")
+        if line
     ]
 
     lines = wrap_lines([
         line
         for line in lines
-        if line
     ])
 
     text_width = max([
@@ -94,7 +94,7 @@ def generate_bubble(
 def generate_char(
     char: str,
     text_width: int
-    ) -> list:
+    ) -> list[str]:
     """
     generate_char(character, text width) -> properly aligned character
 
@@ -102,13 +102,17 @@ def generate_char(
 
     :param char str: Character art
     :param text_width int: Width of the text
-    :returns list: Characters with proper alignment
+    :returns list[str]: Characters with proper alignment
     """
 
     output = []
 
     char_lines = char.split('\n')
-    char_lines = [i for i in char_lines if len(i) != 0]
+    char_lines = [
+        i
+        for i in char_lines
+        if len(i) != 0
+    ]
 
     for line in char_lines:
         output.append(' ' * text_width + line)
@@ -135,7 +139,12 @@ def draw(
         raise Exception('Pass something meaningful to cowsay')
 
     output = generate_bubble(text)
-    text_width = max([len(line) for line in output]) - 4  # 4 is the frame
+
+    text_width = max([
+        len(line)
+        for line in output
+    ]) - 4  # 4 is the frame
+
     output += generate_char(char, text_width)
 
     if to_console:
@@ -158,9 +167,11 @@ for char_name, char_lines in CHARS.items():
     func.__name__ = char_name
     globals()[char_name] = func
     chars[char_name] = func
-    
 
-def get_output_string(char, text) -> str:
+def get_output_string(
+    char: str,
+    text: str
+    ) -> str:
     """
     get_output_string(character, text) -> character with the text bubble
 
