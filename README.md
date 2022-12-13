@@ -77,10 +77,53 @@ pdoc -d google cowsay -o docs
                                                         ||----w |
                                                         ||     ||
 
+>>> worm = '''
+ \
+  \  _
+    ("\
+     ) )
+    ( /
+'''
+>>> print(cowsay.get_output_string(worm, 'So much dust here..'))
+  ___________________
+| So much dust here.. |
+  ===================
+                    \
+                     \  _
+                       ("\
+                        ) )
+                       ( /
 ```
 
 
 # More characters
+- Custom characters
+```console
+>>> print(cowsay.get_output_string('custom character here', 'your text'))
+  _________
+| your text |
+  =========
+         custom character here
+
+>>> duck = r'''
+ \
+  \   __
+    <(o )___
+    ( ._> /
+     `---'
+'''
+>>> print(console.get_output_string(duck, 'I am a duck'))
+  ___________
+| I am a duck |
+  ===========
+            \
+             \   __
+               <(o )___
+               ( ._> /
+                `---'
+```
+
+- Pre-made characters
 ```console
 >>> cowsay.char_names
 ['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty', 'meow', 'miki', 'milk', 'pig', 'stegosaurus', 'stimpy', 'trex', 'turkey', 'turtle', 'tux']
@@ -529,5 +572,4 @@ $ cowsay Hello World --character tux
                 (|     | )
                /'\_   _/`\
                \___)=(___/
-
 ```
