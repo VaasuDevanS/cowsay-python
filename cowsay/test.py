@@ -23,6 +23,7 @@ from .main import (
     turkey,
     turtle,
     tux,
+    octopus,    
 )
 
 LOREM = """Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -571,7 +572,32 @@ MIKI_SOLUTION = r"""
                                                                       &*******************************&
                                                                         &*****************************& 
 """
-
+OCTOPUS_SOLUTION = r"""
+  _________________________________________________
+ /                                                 \
+| Lorem ipsum dolor sit amet, consetetur sadipscing |
+|  elitr, sed diamnonumy eirmod tempor invidunt ut  |
+| labore et dolore magna aliquyam erat,sed diam vol |
+| uptua. At vero eos et accusam et justo duo dolore |
+| s et ea rebum.                                    |
+ \                                                 /
+  =================================================
+                        . . .
+                      .   ^   .
+                     .  ^ ^ ^  .
+                     .  ^ ^ ^  .
+                      .   ^    .
+                        . . .
+          _ _ _ _ _ _ _|     |_ _ _ _ _ _
+         /  _ _ _ _ _ _| o|o |_ _ _ _ _ _ \
+        / /  _ _ _  _ _|  |  |_ _ _ _    \ \
+       / /  /  _ _ _ / /| |\ \ _ _ _  \   \ \
+      / /  /  /     / / | | \ \     \  \   \ \
+     / /  /  /     / /  | |  \ \     \  \   \ \
+    /_/  /  /     / /   | |   \ \     \  \   \_\
+     |  /__/     /_/    |_|    \_\     \__\   |
+          |      /       |       \       |
+"""
 
 def capture_output(function, arguments):
     captured_output = io.StringIO()
@@ -709,7 +735,12 @@ class TestCowsay(unittest.TestCase):
         output = delete_empty_lines(output)
         solution = delete_empty_lines(TUX_SOLUTION)
         assert output == solution
-
+        
+    def test_octopus(self):
+        output = capture_output(octopus, (LOREM))
+        output = delete_empty_lines(output)
+        solution = delete_empty_lines(OCTOPUS_SOLUTION)
+        assert output == solution
 
 if __name__ == "__main__":
     unittest.main()
