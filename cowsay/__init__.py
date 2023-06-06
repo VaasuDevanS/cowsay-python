@@ -27,4 +27,5 @@ from .main import (
     turkey,
     turtle,
     tux,
+    octopus,    
 )
