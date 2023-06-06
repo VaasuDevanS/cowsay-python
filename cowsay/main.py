@@ -31,7 +31,7 @@ def generate_bubble(text):
         output.append("| " + line + " " * (text_width - len(line) + 1) + "|")
     if len(lines) > 1:
         output.append(" \\" + " " * text_width + "/")
-    output.append("  " + "=" * text_width)                 
+    output.append("  " + "=" * text_width)
     return output
 
 
@@ -68,7 +68,7 @@ for char_name, char_lines in CHARS.items():
     func.__name__ = char_name
     globals()[char_name] = func
     chars[char_name] = func
-    
+
 
 def get_output_string(char_name, text):
     if char_name in CHARS:
