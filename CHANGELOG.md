@@ -1,7 +1,20 @@
-Change Log
-==========
+# Change Log
 
 All notable changes to this project will be documented in this file
+
+___
+
+## v6.0 (Sep 15, 2023)
+
+## Added
+- Added CONTRIBUTING.md guide on how to add new characters
+- Exposed `cowsay.draw` method to draw custom characters
+- <b>New character</b>: Octopus (Added by [druhi](https://github.com/druhi))
+
+## Changed
+- Dropped support for Python 3.6 and 3.7
+- Updated to use pytest and added more tests!
+- Simplified the entire codebase and removed unnecessary files
 
 ___
 
@@ -36,7 +49,7 @@ ___
 
 ## Added
 - <b>New character</b>: Pig (Added by [Gerald Sornsen](https://github.com/gsornsen))<br>
-- Command line compatability (Added by [Chad Smith](https://github.com/cs01))
+- Command line compatibility (Added by [Chad Smith](https://github.com/cs01))
 
 ___
 
