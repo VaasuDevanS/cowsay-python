@@ -26,7 +26,7 @@ pip install cowsay
 
 
 # API Usage
-```
+```console
 >>> import cowsay
 
 >>> cowsay.cow('Hello World')
@@ -100,7 +100,7 @@ pip install cowsay
 
 
 # Command Line Usage
-```
+```console
 $ cowsay -t "Hello World"
   ___________
 | Hello World |
