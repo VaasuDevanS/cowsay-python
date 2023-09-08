@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file
 
 ___
 
-## v6.0 (Sep 15, 2023)
+## v6.0 (Sep 08, 2023)
 
 ## Added
 - Added CONTRIBUTING.md guide on how to add new characters
