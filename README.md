@@ -11,12 +11,13 @@
 
 # Introduction
 
-> A python API / console script for the famous linux `cowsay` <br>
-> Take a look at [CHANGELOG.md](https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md) for the changes
+A python API / Command-line tool for the famous linux `cowsay`. <br>
+Take a look at [CHANGELOG.md](https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md) for the changes.
 
 
 # Brief History
-> `cowsay` for GNU/Linux was initially written in perl by Tony Monroe (tony@nog.net), with suggestions from Shannon Appel (appel@CSUA.Berkeley.EDU) and contributions from Anthony Polito (aspolito@CSUA.Berkeley.EDU).
+`cowsay` for GNU/Linux was initially written in perl by Tony Monroe. More information can be found at the
+[Wikipedia page](https://en.wikipedia.org/wiki/Cowsay).
 
 
 # Installation
