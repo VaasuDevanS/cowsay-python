@@ -1,9 +1,10 @@
 
 [![cowsay](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml/badge.svg?branch=main)](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml)
-![](https://img.shields.io/badge/Latest%20Release-Sep%2008,%202023-blue)
+[![codecov](https://codecov.io/gh/VaasuDevanS/cowsay-python/graph/badge.svg?token=GV4ntsCNtd)](https://codecov.io/gh/VaasuDevanS/cowsay-python)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cowsay)
 [![Github](https://img.shields.io/badge/github-cowsay--python-blue)](https://github.com/VaasuDevanS/cowsay-python)
 <br>
+![](https://img.shields.io/badge/Latest%20Release-Sep%2008,%202023-blue)
 [![Downloads](https://static.pepy.tech/badge/cowsay)](https://pepy.tech/project/cowsay)
 [![Downloads](https://static.pepy.tech/badge/cowsay/month)](https://pepy.tech/project/cowsay)
 [![Downloads](https://static.pepy.tech/badge/cowsay/week)](https://pepy.tech/project/cowsay)
