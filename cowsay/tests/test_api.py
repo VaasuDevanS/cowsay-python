@@ -14,7 +14,7 @@ def test_char_names():
     assert cowsay.char_names == sorted(characters)
 
 
-def test_draw():
+def test_draw_error():
 
     with pytest.raises(cowsay.CowsayError) as e:
         cowsay.draw('', '')
@@ -23,6 +23,11 @@ def test_draw():
 
 
 def test_get_output_string():
+
+    assert isinstance(cowsay.get_output_string(char='cow', text='Hello'), str)
+
+
+def test_get_output_string_error():
 
     with pytest.raises(cowsay.CowsayError) as e:
         cowsay.get_output_string('random', 'random text')
