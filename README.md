@@ -1,6 +1,7 @@
 
 [![cowsay](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml/badge.svg?branch=main)](https://github.com/VaasuDevanS/cowsay-python/actions/workflows/cowsay.yaml)
 [![codecov](https://codecov.io/gh/VaasuDevanS/cowsay-python/graph/badge.svg?token=GV4ntsCNtd)](https://codecov.io/gh/VaasuDevanS/cowsay-python)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d5a358f5dd5c41d68db8c331d65fd0fd)](https://app.codacy.com/gh/VaasuDevanS/cowsay-python/dashboard)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cowsay)
 [![Github](https://img.shields.io/badge/github-cowsay--python-blue)](https://github.com/VaasuDevanS/cowsay-python)
 <br>
