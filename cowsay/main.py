@@ -2,7 +2,7 @@ import re
 
 from .characters import CHARS
 
-__version__ = '6.0'
+__version__ = '6.1'
 
 CHARS = dict(sorted(CHARS.items()))
 char_names = list(CHARS.keys())

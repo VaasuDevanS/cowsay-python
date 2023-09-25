@@ -1,6 +1,6 @@
 import argparse
 
-from . import CowsayError, char_names, char_funcs
+from . import CowsayError, char_names, char_funcs, __version__
 
 
 def cli():
@@ -16,6 +16,9 @@ def cli():
 
     parser.add_argument('-t', '--text',
                         required=True)
+
+    parser.add_argument('-v', '--version',
+                        action='version', version=__version__)
 
     args = parser.parse_args()
 

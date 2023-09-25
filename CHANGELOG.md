@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file
 
 ___
 
+## v6.1 (Sep 25, 2023)
+
+## Added
+- -v / --version flag for cowsay cli (https://github.com/VaasuDevanS/cowsay-python/issues/26)
+
+___
+
 ## v6.0 (Sep 08, 2023)
 
 ## Added
