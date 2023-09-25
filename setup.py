@@ -23,4 +23,5 @@ setup(
     long_description_content_type='text/markdown',
     zip_safe=False,
     classifiers=CLASSIFIERS,
+    python_requires='>=3.8'
 )

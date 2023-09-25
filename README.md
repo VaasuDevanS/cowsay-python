@@ -18,8 +18,8 @@ Take a look at [CHANGELOG.md](https://github.com/VaasuDevanS/cowsay-python/blob/
 
 
 # Brief History
-`cowsay` for GNU/Linux was initially written in perl by Tony Monroe. More information can be found at the
-[Wikipedia page](https://en.wikipedia.org/wiki/Cowsay).
+`cowsay` for GNU/Linux was initially written in perl by Tony Monroe. More info 
+[here](https://en.wikipedia.org/wiki/Cowsay).
 
 
 # Installation
