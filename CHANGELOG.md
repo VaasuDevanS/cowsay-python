@@ -8,6 +8,7 @@ ___
 
 ## Added
 - -v / --version flag for cowsay cli (https://github.com/VaasuDevanS/cowsay-python/issues/26)
+- Tested for Python 3.12
 
 ___
 

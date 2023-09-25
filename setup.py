@@ -6,11 +6,12 @@ CLASSIFIERS = [
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
 ]
 
 setup(
     name='cowsay',
-    version='6.0',
+    version='6.1',
     url='https://github.com/VaasuDevanS/cowsay-python',
     license='GNU-GPL',
     author='Vaasudevan Srinivasan',
