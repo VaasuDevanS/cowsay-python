@@ -1,3 +1,6 @@
+from __future__ import annotations
+from typing import Callable
+
 from .main import (
 
     __version__,
@@ -16,7 +19,7 @@ from .main import (
 
 # This is where we create functions for each character dynamically
 
-char_funcs = {}
+char_funcs: dict[str, Callable] = {}
 
 for ch_name, ch_lines in CHARS.items():
 

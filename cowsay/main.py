@@ -1,11 +1,12 @@
+from __future__ import annotations
 import re
 
 from .characters import CHARS
 
 __version__ = '6.1'
 
-CHARS = dict(sorted(CHARS.items()))
-char_names = list(CHARS.keys())
+CHARS: dict[str, str] = dict(sorted(CHARS.items()))
+char_names: list[str] = list(CHARS.keys())
 
 
 class CowsayError(LookupError):
@@ -51,7 +52,7 @@ def generate_char(char_lines: str, text_width: int) -> list:
     return output
 
 
-def draw(text: str, char_lines: str, to_console: bool = True) -> str:
+def draw(text: str, char_lines: str, to_console: bool = True) -> None | str:
 
     if len(re.sub(r'\s', '', text)) == 0:
         raise CowsayError('Pass something meaningful to cowsay')
