@@ -1,0 +1,32 @@
+[project]
+name = "cowsay"
+version = "6.1"
+description = "The famous cowsay for GNU/Linux is now available for python"
+license = {text = "GPL-3.0"}
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["cowsay"]
+authors = [{name = "Vaasudevan Srinivasan", email = "vaasuceg.96@gmail.com"}]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "coverage"]
+
+[project.scripts]
+cowsay = "cowsay.__main__:cli"
+
+[project.urls]
+"Changelog" = "https://github.com/VaasuDevanS/cowsay-python/blob/main/CHANGELOG.md"
+"Source" = "https://github.com/VaasuDevanS/cowsay-python"
+"Tracker" = "https://github.com/VaasuDevanS/cowsay-python/issues"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
