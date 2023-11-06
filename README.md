@@ -29,7 +29,7 @@ pip install cowsay
 
 
 # API Usage
-```console
+```pycon
 >>> import cowsay
 
 >>> cowsay.cow('Hello World')
@@ -135,7 +135,7 @@ $ cowsay -t "Hello World" -c "tux"
 
 
 # More Characters
-```console
+```pycon
 >>> cowsay.char_names
 ['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty',
 'meow', 'miki', 'milk', 'octopus', 'pig', 'stegosaurus', 'stimpy', 'trex', 
