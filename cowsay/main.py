@@ -28,9 +28,7 @@ def wrap_lines(lines: list, max_width: int = 49) -> list:
         line_width = 0
 
         # Loop over the characters in the line.
-        for i in range(len(line)):
-
-            character = line[i]
+        for i, character in enumerate(line):
 
             if character in list(string.printable):
                 # Half width characters.
