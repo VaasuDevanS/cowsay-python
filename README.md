@@ -137,7 +137,7 @@ $ cowsay -t "Hello World" -c "tux"
 # More Characters
 ```pycon
 >>> cowsay.char_names
-['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty',
+['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty', 'kitten', 
 'meow', 'miki', 'milk', 'octopus', 'pig', 'stegosaurus', 'stimpy', 'trex', 
 'turkey', 'turtle', 'tux']
 
