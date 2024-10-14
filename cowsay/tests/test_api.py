@@ -6,7 +6,7 @@ import cowsay
 def test_char_names():
 
     characters = ['beavis', 'cheese', 'daemon', 'cow', 'dragon',
-                  'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus',
+                  'ghostbusters', 'kitty', 'mashiro', 'meow', 'milk', 'stegosaurus',
                   'stimpy', 'turkey', 'turtle', 'tux',
                   'pig', 'trex', 'miki', 'fox', 'octopus']
 
