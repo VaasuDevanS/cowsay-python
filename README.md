@@ -153,9 +153,13 @@ $ cowsay -t "Hello World" -c "tux"
 19
 ```
 
-# Contributing
+# Contributers
 <a href="https://github.com/VaasuDevanS/cowsay-python/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=VaasuDevanS/cowsay-python&columns=5" />
 </a>
 
 Guide: [CONTRIBUTING.md](https://github.com/VaasuDevanS/cowsay-python/blob/main/CONTRIBUTING.md)
+
+
+# Stargazers over time
+[![Stargazers over time](https://starchart.cc/VaasuDevanS/cowsay-python.svg?variant=adaptive)](https://starchart.cc/VaasuDevanS/cowsay-python)
