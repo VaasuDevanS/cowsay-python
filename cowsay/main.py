@@ -1,5 +1,6 @@
 from __future__ import annotations
 import re
+import textwrap
 
 from .characters import CHARS
 
@@ -13,21 +14,10 @@ class CowsayError(LookupError):
     pass
 
 
-def wrap_lines(lines: list, max_width: int = 49) -> list:
-
-    new_lines = []
-    for line in lines:
-        for line_part in [
-            line[i: i+max_width] for i in range(0, len(line), max_width)
-        ]:
-            new_lines.append(line_part)
-    return new_lines
-
-
 def generate_bubble(text: str) -> list:
 
-    lines = [line.strip() for line in text.split('\n')]
-    lines = wrap_lines([line for line in lines if line])
+    text = textwrap.fill(text, width=49)
+    lines = [line.strip() for line in text.splitlines()]
     text_width = max([len(line) for line in lines])
 
     output = ["  " + "_" * text_width]
