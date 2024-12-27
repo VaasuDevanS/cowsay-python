@@ -161,5 +161,5 @@ $ cowsay -t "Hello World" -c "tux"
 Guide: [CONTRIBUTING.md](https://github.com/VaasuDevanS/cowsay-python/blob/main/CONTRIBUTING.md)
 
 
-# Stargazers over time
-[![Stargazers over time](https://starchart.cc/VaasuDevanS/cowsay-python.svg?variant=adaptive)](https://starchart.cc/VaasuDevanS/cowsay-python)
+# Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=VaasuDevanS/cowsay-python&type=Date)](https://star-history.com/#VaasuDevanS/cowsay-python&Date)
