@@ -1,5 +1,6 @@
 from __future__ import annotations
 import re
+import string
 
 from .characters import CHARS
 
@@ -15,26 +16,63 @@ class CowsayError(LookupError):
 
 def wrap_lines(lines: list, max_width: int = 49) -> list:
 
+    # Buffers that will be used in the last.
     new_lines = []
+    new_lines_width = []
+
     for line in lines:
-        for line_part in [
-            line[i: i+max_width] for i in range(0, len(line), max_width)
-        ]:
-            new_lines.append(line_part)
-    return new_lines
+
+        # Check whether the line width is overflow (greater than
+        # max_width) because of half-width and full-width characters.
+        line_buffer = ""
+        line_width = 0
+
+        # Loop over the characters in the line.
+        for i, character in enumerate(line):
+
+            if character in list(string.printable):
+                # Half width characters.
+                char_width = 1
+            else:
+                # Full width characters.
+                char_width = 2
+
+            # Check whether the `line_buffer` is overflowed.
+            overflow = (line_width + char_width > max_width)
+
+            if overflow:
+                # Add `line_buffer` and `line_width`.
+                new_lines.append(line_buffer)
+                new_lines_width.append(line_width)
+
+                # Reinitialize the `line_buffer` and `line_width`.
+                line_buffer = character
+                line_width = char_width
+            else:
+                # Add this character to `line_buffer` if not overflowed.
+                line_buffer += character
+                line_width += char_width
+
+            if (i == (len(line) - 1)):
+                # Last character.
+                new_lines.append(line_buffer)
+                new_lines_width.append(line_width)
+
+    return new_lines, new_lines_width
 
 
-def generate_bubble(text: str) -> list:
+def generate_bubble(text: str, max_width: int = 49) -> list:
 
     lines = [line.strip() for line in text.split('\n')]
-    lines = wrap_lines([line for line in lines if line])
-    text_width = max([len(line) for line in lines])
+    lines, lines_width = wrap_lines(
+        lines=[line for line in lines if line], max_width=max_width)
+    text_width = max(lines_width)
 
     output = ["  " + "_" * text_width]
     if len(lines) > 1:
         output.append(" /" + " " * text_width + "\\")
-    for line in lines:
-        output.append("| " + line + " " * (text_width - len(line) + 1) + "|")
+    for line, line_width in zip(lines, lines_width):
+        output.append("| " + line + " " * (text_width - line_width + 1) + "|")
     if len(lines) > 1:
         output.append(" \\" + " " * text_width + "/")
     output.append("  " + "=" * text_width)
@@ -52,12 +90,13 @@ def generate_char(char_lines: str, text_width: int) -> list:
     return output
 
 
-def draw(text: str, char_lines: str, to_console: bool = True) -> None | str:
+def draw(text: str, char_lines: str, to_console: bool = True,
+         max_width: int = 49) -> None | str:
 
     if len(re.sub(r'\s', '', text)) == 0:
         raise CowsayError('Pass something meaningful to cowsay')
 
-    output = generate_bubble(text)
+    output = generate_bubble(text, max_width=max_width)
     text_width = max([len(line) for line in output]) - 4  # 4 is the frame
     output += generate_char(char_lines, text_width)
     if to_console:
@@ -67,9 +106,9 @@ def draw(text: str, char_lines: str, to_console: bool = True) -> None | str:
         return '\n'.join(output)
 
 
-def get_output_string(char: str, text: str) -> str:
+def get_output_string(char: str, text: str, max_width: int = 49) -> str:
 
     if char in CHARS:
-        return draw(text, CHARS[char], to_console=False)
+        return draw(text, CHARS[char], to_console=False, max_width=max_width)
     else:
         raise CowsayError(f'Available Characters: {char_names}')
