@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 from . import CowsayError, char_names, char_funcs, __version__
 
@@ -15,7 +16,7 @@ def cli():
                         default='cow')
 
     parser.add_argument('-t', '--text',
-                        required=True)
+                        help='Text to display. If not provided, reads from stdin.')
 
     parser.add_argument('-v', '--version',
                         action='version', version=__version__)
@@ -25,7 +26,14 @@ def cli():
     if args.character not in char_names:
         raise CowsayError(f'Available Characters: {char_names}')
 
-    char_funcs[args.character](args.text)
+    if args.text:
+        text = args.text
+    else:
+        if sys.stdin.isatty():
+            parser.error('Text argument is required if not piping input.')
+        text = sys.stdin.read().strip()
+
+    char_funcs[args.character](text)
 
 
 if __name__ == "__main__":
