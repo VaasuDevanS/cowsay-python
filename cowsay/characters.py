@@ -401,4 +401,23 @@ CHARS = {
           |      /       |       \       |
 ''',
 
+"python": r'''
+ \
+  \
+   \
+    ╔══════════════════════════╗
+    ║                          ║
+    ║          [1;34m.XXXXX.[m         ║
+    ║         [1;34mXX XXXXXX[m        ║
+    ║         [1;34m'"""XXXXX[m        ║
+    ║   [1;34m.XXXXXXXXXXXXXX[m [1;33mXXXX.[m  ║
+    ║  [1;34m.XXXXXXXXXXXXXXX[m [1;33mXXXXX.[m ║
+    ║  [1;34m'XXXXX[m [1;33mxxxxxxxxxxXXXXX'[m ║
+    ║   [1;34m'XXXX[m [1;33mXXXXXXXXXXXXXX'[m  ║
+    ║         [1;33mXXXXX....[m        ║
+    ║         [1;33mYXXXXX XY[m        ║
+    ║          [1;33m"YXXXY"[m         ║
+    ║                          ║
+    ╚══════════════════════════╝
+''',
 }
