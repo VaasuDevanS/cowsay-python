@@ -585,5 +585,71 @@ CHARS_SOLUTIONS = {
                                                       |  /__/     /_/    |_|    \_\     \__\   |
                                                            |      /       |       \       |
 """,
-
+    "cat": r"""
+  _________________________________________________
+ /                                                 \
+| Lorem ipsum dolor sit amet, consetetur sadipscing |
+|  elitr, sed diamnonumy eirmod tempor invidunt ut  |
+| labore et dolore magna aliquyam erat,sed diam vol |
+| uptua. At vero eos et accusam et justo duo dolore |
+| s et ea rebum.                                    |
+ \                                                 /
+  =================================================
+                                                    \                            .-.
+                                                     \                            \ \
+                                                      \                            | |
+                                                       \                           | |
+                                                        \                          | |
+                                                         \      ./\---/\   _,---._ | |
+                                                          \     /^   ^  \,'       `. ;
+                                                                ( O   O  )           ;
+                                                                `.=o=__,'            \
+                                                               /         _,--.__     \
+                                                              /  _ )   ,'   `-. `-.  \
+                                                             / ,' /  ,'        \ \ \ \
+                                                            / /  / ,'          (,_)(,_)
+                                                           (,;  (,,)
+""",
+    "owl": r"""
+  _________________________________________________
+ /                                                 \
+| Lorem ipsum dolor sit amet, consetetur sadipscing |
+|  elitr, sed diamnonumy eirmod tempor invidunt ut  |
+| labore et dolore magna aliquyam erat,sed diam vol |
+| uptua. At vero eos et accusam et justo duo dolore |
+| s et ea rebum.                                    |
+ \                                                 /
+  =================================================
+                                                    \
+                                                      \
+                                                        \
+                                                          \
+                                                            \
+                                                              \
+                                                                \
+                                                                  \
+                                                                    \
+                                                                      \        ____
+                                                                        \   ,''    ''.
+                                                                          / `-.  .-' \
+                                                                          /( (O))((O) )
+                                                                        /'-..-'/\`-..|
+                                                                      ,'\   `-.\/.--'|
+                                                                    ,' ( \           |
+                                                                  ,'( (   `._        |
+                                                                  /( (  ( ( | `-._ _,-;
+                                                                /( (  ( ( (|     '  ;
+                                                                / ((  (    /        /
+                                                              //         /        /
+                                                              //  / /  ,'        /
+                                                              // /    ,'         /
+                                                              //  / ,'          ;
+                                                              //_,-'          ;
+                                                              // /,,,,..-))-))\    /|
+                                                                /; ; ;\ `.  \  \  / |
+                                                              /; ; ; ;\  \.  . \/./
+                                                              (; ; ;_,_,\  .: \   /
+                                                              `-'-'     | : . |:|
+                                                                        |. | : .|
+    """,
 }
