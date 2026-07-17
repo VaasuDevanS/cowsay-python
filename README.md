@@ -139,7 +139,7 @@ $ cowsay -t "Hello World" -c "tux"
 >>> cowsay.char_names
 ['beavis', 'cheese', 'cow', 'daemon', 'dragon', 'fox', 'ghostbusters', 'kitty',
 'meow', 'miki', 'milk', 'octopus', 'pig', 'stegosaurus', 'stimpy', 'trex', 
-'turkey', 'turtle', 'tux']
+'turkey', 'turtle', 'tux', 'dog']
 
 
 >>> cowsay.char_funcs

@@ -586,4 +586,28 @@ CHARS_SOLUTIONS = {
                                                            |      /       |       \       |
 """,
 
+
+    'dog': r"""
+  _________________________________________________
+ /                                                 \
+| Lorem ipsum dolor sit amet, consetetur sadipscing |
+|  elitr, sed diamnonumy eirmod tempor invidunt ut  |
+| labore et dolore magna aliquyam erat,sed diam vol |
+| uptua. At vero eos et accusam et justo duo dolore |
+| s et ea rebum.                                    |
+ \                                                 /
+  =================================================
+                                                     \                                         
+                                                      \                                        
+                                                       \                                       
+                                                         |\    /|                              
+                                                         | \__/ |                              
+                                                         | @ @  |                              
+                                                         <>     |                              
+                                                         _/\_    |---------_____                
+                                                         |                     `----|          
+                                                         |            |             |______    
+                                                   ______|_      _____|       |_____ _____ `--,
+                                                   /_/______/___/__/__________|     |     ---) 
+""",
 }

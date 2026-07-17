@@ -8,7 +8,7 @@ def test_char_names():
     characters = ['beavis', 'cheese', 'daemon', 'cow', 'dragon',
                   'ghostbusters', 'kitty', 'meow', 'milk', 'stegosaurus',
                   'stimpy', 'turkey', 'turtle', 'tux',
-                  'pig', 'trex', 'miki', 'fox', 'octopus']
+                  'pig', 'trex', 'miki', 'fox', 'octopus', 'dog']
 
     assert len(cowsay.char_names) == len(characters)
     assert cowsay.char_names == sorted(characters)
